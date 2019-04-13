@@ -1,5 +1,5 @@
 name: ISEE 2019 -- Template
 markdown: kramdown
-baseurl: /Money Control-template
+baseurl: /isee2019-CodeSlayers-template
 permalink: /blog/:year/:month/:day/:title/
 theme: jekyll-theme-dinky
