@@ -1,5 +1,47 @@
-name: ISEE 2019 -- Template
-markdown: kramdown
-baseurl: /isee2019-CodeSlayers
-permalink: /blog/:year/:month/:day/:title/
-theme: jekyll-theme-dinky
+# Site
+title:              CodeSlayers 
+bio:                'Warriors of the code war'
+description:        "Technology is nothing if not utilized. We make sure you would find it wasy and makes your life easier with our applications"
+reading_time:       true
+words_per_minute:   200
+logo:               'assets/img/logo1.png'
+background:         'assets/img/image1.png'
+tiled_bg:           true   # Set this true if you want to tile your background image, otherwise it will be covered
+locale:             en_US
+url:                https://dbse-teaching.github.io/isee2019-CodeSlayers/
+
+# Jekyll
+permalink:          /:title/
+markdown:           kramdown
+highlighter:        rouge
+kramdown:
+  auto_ids:         true
+  footnote_nr:      1
+  entity_output:    as_char
+  toc_levels:       1..6
+  enable_coderay:   false
+mathjax:            true
+sass:
+  sass_dir:         _sass
+  style:            compressed
+
+# Comments
+disqus_shortname:   Hariharasudhan177
+
+# Social
+facebook:           OVGU.Magdeburg
+github-url:         DBSE-teaching/isee2019-CodeSlayers
+
+
+# Gems
+gems:
+  - jekyll-mentions
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-gist
+
+jekyll-mentions:
+    base_url: https://github.com
+
+# Exclude list
+exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]
