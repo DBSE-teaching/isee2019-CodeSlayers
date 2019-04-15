@@ -21,11 +21,11 @@ comments: true
 
 Mobile phones have become compulsory part of our lives. Mobile applications makes day to day life easier, faster and efficient. Such applications are created by hidden warriors with only fingers as weopons. But they make so many lives better. We are a team of four such warriors and we call ourselves CodeSlayers. 
 
-We are an energetic team who now concentrate mainly on android development. We have started our first project. And continue reading the blog to know our resut in this code war. 
+We are an energetic team who concentrating mainly on android development. We have started our first project which is described below. Continue reading the blog to travel with us in this code war. 
 
 <h1><i>Money control application</i></h1>
 
-Trading of goods and services have always been a significant factor in human civilisation. Currency used for trading has evolved from barter system to digital money. Now buying of goods and services has become easier and digital marketing lures us to spend. So, tracking the savings and expenditure is an absolute necessity in this modern world. An android application for mobiles phones would provide an easier computing, accessibility of money and tracking of money flow. As a regular user of an android phone, apps are an integral part of day-to-day life. The management of the money spent on a daily basis is necessary to keep track of the overall expenditure especially for students. Therefore, for faster and efficient organization of funds, a money control app would be the best solution.
+Trading of goods and services have always been a significant factor in human civilisation. Currency used for trading has evolved from barter system to digital money. Now buying of goods and services has become easier and digital marketing lures us to spend. So, tracking the savings and expenditure is an absolute necessity in this modern world. An android application for mobiles phones would provide an easier computing, accessibility of money and tracking of money flow. As a regular user of an android phone, apps are an integral part of day-to-day life. The management of the money spent on a daily basis is necessary to keep track of the overall expenditure especially for students. Therefore, for faster and efficient organization of funds, a money control application would be the best solution.
 
 <h1><i>Members</i></h1>
 
@@ -54,12 +54,9 @@ Trading of goods and services have always been a significant factor in
 <b><i>Hariharasudhan Gunasekaran</i></b> 
 
 
-To gain knowledge on the cycle of software development and acquire
-hands-on knowledge in android development. Also to sharpen my coding
- skill and improve communication and team work skills
+I have taken this course to gain knowledge on the cycle of software development. Though having three years experience in IT I believe this course will help me strenghen my basics and understand every nook and corner in software development. Also learning through hands-on knowledge in android development would be good addition to my skillset and sharpen my coding experience. 
 
 <b><i>Prathap Dhanasekaran</i></b>
-
 
 
   Being a student money control is very essential to spend on valuable
@@ -111,7 +108,7 @@ being an androind application development team and trying to make day to day lif
 
 <h1><i>Methodology and flexibility</i></h1>
 
-Since we use agile methodology, we have to be really flexible as one of the main motive of agile is to react to changes in circumstances. We are a team which mainly concentrates on customer satisfaction. If customer needs the requirement to be changed we will meet the requirements and make sure the custormer is satisfied. Also any changes in the team will not affect the product. 
+Since we use agile methodology, we have to be really flexible as one of the main motive of agile methodology is to react to changes in circumstances. We are a team which mainly concentrates on customer satisfaction. If customer needs the requirement to be changed or new requirements to be added, we will meet the requirements and make sure the custormer is satisfied. Also any changes in the team will not affect the product. All these we plan to achieve with a bet team spirit and many brainstorming sessions. 
 
 <figure>
 	<a href="https://live.staticflickr.com/7833/40644139243_537ba5d5df_o_d.jpg"><img src="https://live.staticflickr.com/7833/40644139243_537ba5d5df_o_d.jpg"></a>
