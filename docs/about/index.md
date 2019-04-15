@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About the Theme
+title: About the Team
 tags: [about, Jekyll, theme, moon]
 date: 2016-03-21
 comments: false
@@ -51,9 +51,7 @@ Trading of goods and services have always been a significant factor in
 <b><i>Hariharasudhan Gunasekaran</i></b> 
 
 
-To gain knowledge on the cycle of software development and acquire
-hands-on knowledge in android development. Also to sharpen my coding
- skill and improve communication and team work skills
+I have taken this course to gain knowledge on the cycle of software development. Though having three years experience in IT I believe this course will help me strenghen my basics and understand every nook and corner in software development. Also learning through hands-on knowledge in android development would be good addition to my skillset and sharpen my coding experience.
 
 <b><i>Prathap Dhanasekaran</i></b>
 
