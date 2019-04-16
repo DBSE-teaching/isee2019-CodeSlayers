@@ -27,7 +27,7 @@ We are an energetic team who concentrating mainly on android development. We hav
 
 When even renowned companies goes into bankruptcy and
 countries goes into debt crisis, money management is an surely an issue for a
-common man. We aim to address at least some part of this issue with our first android application. 
+common man. Currency used for trading has evolved from barter system to digital money. Now buying of goods and services has become easier and digital marketing lures us to spend. So, tracking the savings and expenditure is an absolute necessity in this modern world. We aim to address at least some part of this issue with our first android application by incorporating easier computing, accessibility of money and tracking of money flow. 
 
 <h1><i>Members</i></h1>
 
