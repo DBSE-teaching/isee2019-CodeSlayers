@@ -19,13 +19,15 @@ comments: true
 </figure>
 
 
-Mobile phones have become compulsory part of our lives. Mobile applications makes day to day life easier, faster and efficient. Such applications are created by hidden warriors with only fingers as weopons. But they make so many lives better. We are a team of four such warriors and we call ourselves CodeSlayers. 
+Mobile phones have become compulsory part of our lives. Mobile applications makes day to day life easier, faster and efficient. Such applications are created by hidden warriors with only fingers as weapons. But they make so many lives better. We are a team of four such warriors and we call ourselves CodeSlayers. 
 
 We are an energetic team who concentrating mainly on android development. We have started our first project which is described below. Continue reading the blog to travel with us in this code war. 
 
 <h1><i>Money control application</i></h1>
 
-Trading of goods and services have always been a significant factor in human civilisation. Currency used for trading has evolved from barter system to digital money. Now buying of goods and services has become easier and digital marketing lures us to spend. So, tracking the savings and expenditure is an absolute necessity in this modern world. An android application for mobiles phones would provide an easier computing, accessibility of money and tracking of money flow. As a regular user of an android phone, apps are an integral part of day-to-day life. The management of the money spent on a daily basis is necessary to keep track of the overall expenditure especially for students. Therefore, for faster and efficient organization of funds, a money control application would be the best solution.
+When even renowned companies goes into bankruptcy and
+countries goes into debt crisis, money management is an surely an issue for a
+common man. We aim to address at least some part of this issue with our first android application. 
 
 <h1><i>Members</i></h1>
 
