@@ -1,3 +1,12 @@
+# Codeslayers - Money control application - ISEE2019 
+
+This is the main repository of the team Codeslayers developing a android application for money control. 
+
+A link to download the first version will be uploaded soon here. 
+
+Until then follow our developer's blog for the latest updates and other information about our team, [Blog link](https://dbse-teaching.github.io/isee2019-CodeSlayers/)
+
+
 # Software Engineers Blog
 
 This is the main page of your repository for the course project that is a center piece of the lecture "Introduction to Software Engineering for Engineers" in summer term 2019.
