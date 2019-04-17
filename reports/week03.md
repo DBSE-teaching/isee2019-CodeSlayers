@@ -28,11 +28,11 @@ Problems and troubles faced
 #### SECTION 3 
 
               Goal                            Responsible 
-1. Sprint planning and tool decision          Cecil and Prathap 
-2. Basic protype development                  Cecil and Hari 
-3. Application UI design                      Poorvi and Prathap 
-4. Basic requirement finalisation             Poorvi 
-5. Application name and logo                  Hari 
+1. Sprint planning and tool decision          - Cecil and Prathap 
+2. Basic protype development                  - Cecil and Hari 
+3. Application UI design                      - Poorvi and Prathap 
+4. Basic requirement finalisation             - Poorvi 
+5. Application name and logo                  - Hari 
 
 #### SECTION 4 
 
