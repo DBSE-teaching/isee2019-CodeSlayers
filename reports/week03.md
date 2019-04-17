@@ -1,8 +1,8 @@
-SECTION 1 
+####SECTION 1 
 
-SECTION 2 
+####SECTION 2 
 
-Activities completed  
+Activities completed
 
 1. Blog design
 2. Milestone presentation 1 
@@ -19,13 +19,13 @@ Things learned
 4. Basic HTML coding 
 5. SCRUM and agile methodology 
 
-Problems 
+Problems and troubles faced
 
 1. Blog design  
 2. Team communication 
 3. Basic requirements finalization 
 
-SECTION 3 
+####SECTION 3 
 
               Goal                            Responsible 
 1. Sprint planning and tool decision          Cecil and Prathap 
@@ -34,7 +34,7 @@ SECTION 3
 4. Basic requirement finalisation             Poorvi 
 5. Application name and logo                  Hari 
 
-SECTION 4 
+####SECTION 4 
 
 1. Basic protoype, design and requirement confirmation 
 2. Sprint plan acceptance 
