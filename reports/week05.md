@@ -1,6 +1,5 @@
 #### SECTION 1 
 
-
                  Goal                                                 Responsible 
 1. Basic protype development(Screen and avtivity)                 - Cecil and Hari 
 2. Basic protype development(Database)                            - Poorvi and Prathap 
@@ -57,18 +56,6 @@ Problems and troubles faced
 | 7 | Blog content |  Poorvi |
 | 8 | Blog page design and completion |  Prathap  |
 | 9 | Presentation | Cecil  |
-
-
-              Goal                                                   Responsible 
-1. Basic protype development(Database)                            - Poorvi and Cecil  
-2. Application UI design                                          - Prathap and Hari 
-3. Use case diagram modification and final                        - Cecil 
-4. Application name and logo                                      - Poorvi and Prathap 
-5. User stories design for presentation and blog                  - Hari 
-6. Class diagram                                                  - Cecil and Hari 
-7. Blog content                                                   - Poorvi 
-8. Blog page design and completion                                - Prathap 
-9. Presentation                                                   - Cecil 
 
 #### SECTION 4 
 
