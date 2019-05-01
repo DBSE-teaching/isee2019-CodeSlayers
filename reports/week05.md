@@ -1,9 +1,8 @@
 #### SECTION 1 
 
 
-    |          Goal                      |                             Responsible |
-    | --- | --- | 
-|1. Basic protype development(Screen and avtivity)        |         - Cecil and Hari |
+                 Goal                                                 Responsible 
+1. Basic protype development(Screen and avtivity)                 - Cecil and Hari 
 2. Basic protype development(Database)                            - Poorvi and Prathap 
 3. Application UI design                                          - Poorvi and Hari 
 4. Use case diagram                                               - Cecil and Prathap
