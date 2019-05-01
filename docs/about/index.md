@@ -55,10 +55,5 @@ I have taken this course to gain knowledge on the cycle of software development.
 
 <b><i>Prathap Dhanasekaran</i></b>
 
-
-
-  Being a student money control is very essential to spend on valuable
- things and also have a track of it for perfect planning. Personally I am
- little absent minded and might loose the track of money flow when time
- passes . This app will help me to utilize my funds in most efficient and
- accurate manner
+Personally I am from a IT working background so would like to enhance my skillset through android programming. On a day today process money control is very essential ,to spend on valuable  things and also have a track of it for perfect planning. Everyone of us are having a busy life  and might loose the track of money flow when time  passes . This app will help  to utilize our  funds in most efficient and
+ accurate manner.
