@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackGround"
+    android:stretchColumns="1">
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/appBackGround"
+        android:orientation="vertical"
+        android:stretchColumns="1"
+        android:id="@+id/tablelayoutexpense_id">
+    <TableRow android:padding="25dp">
+    </TableRow>
+    </TableLayout>
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/chart"></com.github.mikephil.charting.charts.PieChart>
+
+</RelativeLayout>
