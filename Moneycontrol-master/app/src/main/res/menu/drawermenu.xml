@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-<item android:id="@+id/summary" android:title="Summary" />
-<item android:id="@+id/expense" android:title="Expense" />
-<item android:id="@+id/income" android:title="Income" />
-<item android:id="@+id/visual" android:title="Visualstats" />
-<item android:id="@+id/exit" android:title="Exit" />
-</menu>
