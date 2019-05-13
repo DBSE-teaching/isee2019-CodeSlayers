@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/in_out"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contextClickable="true"
+    android:background="@color/appBackGround"
+    >
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:stretchColumns="1">
+
+    <TableRow android:padding="5dip"
+        >
+
+    <TextView
+        android:id="@+id/amountTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="@string/Amount"
+        android:textSize="16sp"
+        android:textColor="@color/textColour"
+         />
+
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/amountTag"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="numberSigned"
+        />
+
+    </TableRow>
+        <TableRow android:padding="5dip"
+            >
+
+    <TextView
+        android:id="@+id/dateTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/amountTag"
+        android:text="@string/Date"
+        android:textSize="16sp"
+        android:textColor="@color/textColour"
+        />
+
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/dateTag"
+        android:layout_below="@+id/editText2"
+        android:layout_weight="1"
+        />
+
+        </TableRow>
+
+        <TableRow android:padding="5dip"
+            >
+    <TextView
+        android:id="@+id/categoryOptionsTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/dateTag"
+        android:text="Category"
+        android:textSize="16sp"
+        android:textColor="@color/textColour"
+        />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/categoryOptions"
+        ></Spinner>
+
+        </TableRow>
+        <TableRow android:padding="5dip"
+            >
+    <TextView
+        android:id="@+id/accountOptionsTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/categoryOptionsTag"
+        android:text="Account"
+        android:textSize="16sp"
+        android:textColor="@color/textColour"
+        />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/accountOptions"
+
+
+        ></Spinner>
+
+
+        </TableRow>
+
+        <TableRow android:padding="5dip"
+           >
+
+            <TextView
+                android:id="@+id/RecurrenceTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/categoryOptionsTag"
+                android:text="Account"
+                android:textSize="16sp"
+                android:textColor="@color/textColour"
+                />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Recurrence"
+                ></Spinner>
+
+            </TableRow>
+
+        <TableRow android:padding="5dip"
+            >
+
+
+            <TextView
+                android:id="@+id/notesTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Notes"
+                android:textSize="16sp"
+                android:textColor="@color/textColour"
+                />
+
+            <EditText
+                android:id="@+id/notes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/notesTag"
+                android:layout_weight="1"
+                android:ems="10"
+                />
+
+        </TableRow>
+
+        <TableRow android:padding="5dip"
+            >
+
+            <Button
+                android:id="@+id/getexpdet"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_span="2"
+                android:text="Add Expense"
+                android:textColor="#fff"
+                android:backgroundTint="@color/colorPrimary"
+                />
+        </TableRow>
+
+    </TableLayout>
+
+
+
+</RelativeLayout>

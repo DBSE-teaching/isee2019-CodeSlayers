@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/in_out"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contextClickable="true"
+    android:background="@color/appBackGround"
+    >
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackGround"
+    android:orientation="vertical"
+    android:stretchColumns="1">
+
+
+
+    <TableRow>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_marginLeft="10dp"
+            android:text="@string/FromDate"
+            android:textColor="@color/textColour"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/fromdatatext"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginLeft="10dp"
+            android:padding="15dp"
+            android:textColor="#000" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/ToDate"
+            android:textColor="@color/textColour"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/todatatext"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:padding="5dp"
+            android:textColor="#000" />
+    </TableRow>
+
+
+    <TableRow android:padding="5dip">
+
+        <Button
+            android:id="@+id/getDetails"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_span="2"
+            android:text="@string/GetDetails"
+            android:textColor="#fff"
+            android:backgroundTint="@color/colorPrimary"
+            />
+    </TableRow>
+</TableLayout>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="175dp"
+        android:id="@+id/myListView"/>
+
+</RelativeLayout>
+
+
+
