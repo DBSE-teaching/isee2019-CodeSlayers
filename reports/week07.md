@@ -50,14 +50,13 @@ Problems and troubles faced
 
 | No | Goal  | Responsible  |
 | :-----: | :-: | :-: |
-
 | 1 | Retreiving Data ,parsing and adding more Database constraints |  Poorvi and Cecil  |
-| 2 | Application UI flow modification based on review  |  Prathap and Hari  |
+| 2 | Application UI flow modification based on review |  Prathap and Hari  |
 | 3 | Application name and logo   |  Poorvi and Prathap  |
 | 4 | Application settings menu |  Poorvi and Prathap |
 | 5 | Application PIN - Authentication |  Prathap  |
-
-
+| 6 | Visual stats based on filters and of income |  Hari  |
+| 7 | Adding new user stories |  Poorvi  |
 
 #### SECTION 4 
 
