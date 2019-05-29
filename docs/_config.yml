@@ -5,7 +5,7 @@ description:        "Technology is nothing if not utilized. We make sure you wou
 reading_time:       true
 words_per_minute:   200
 logo:               'assets/img/IMG_20190529_151633.png'
-background:         'assets/img/image1.png'
+background:         'assets/img/currency.jpg'
 tiled_bg:           true   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
 url:                https://dbse-teaching.github.io/isee2019-CodeSlayers/
