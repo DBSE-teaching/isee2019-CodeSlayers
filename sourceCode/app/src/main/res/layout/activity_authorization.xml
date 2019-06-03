@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contextClickable="true"
+    android:background="@color/appBackGround"
+    >
+
+    <EditText
+        android:id="@+id/boxPIN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:maxLength="4"
+        android:hint="Enter PIN"
+        android:layout_centerInParent="true"
+        />
+
+    <Button
+        android:id="@+id/submitPIN"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/boxPIN"
+        android:layout_span="2"
+        android:text="Submit"
+        android:textColor="#fff"
+        android:backgroundTint="@color/buttonColourPrimary"
+        android:layout_centerInParent="true"
+
+        />
+
+</RelativeLayout>

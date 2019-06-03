@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#8747c2</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#000090</color>
+    <color name="white">#ffffff</color>
+    <color name="appBackGround">#ffffff</color>
+    <color name="textBoxBackground">#ffffff</color>
+    <color name="textColour">#000000</color>
+    <color name="textColourPrimary">#FF8C00</color>
+    <color name="buttonColourPrimary">#FF8C00</color>
+
+</resources>

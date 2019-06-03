@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackGround"
+    android:stretchColumns="1">
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tablelayoutexpense_id2"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@color/appBackGround"
+        android:orientation="vertical"
+        android:stretchColumns="1">
+
+
+        <TableRow
+            android:id="@+id/fromdate"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/selectDateTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Date"
+                android:textColor="@color/textColourPrimary"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/monthList"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                ></Spinner>
+
+
+            <Spinner
+                android:id="@+id/yearList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="1"
+
+                ></Spinner>
+
+
+        </TableRow>
+    </TableLayout>
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/appBackGround"
+        android:layout_below="@+id/tablelayoutexpense_id2"
+        android:orientation="vertical"
+        android:stretchColumns="1"
+        android:id="@+id/tablelayoutexpense_id">
+
+        <TableRow android:id="@+id/categoryFilter"
+            android:padding="1dip">
+
+            <TextView
+                android:id="@+id/categoryFilterTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Category"
+                android:textSize="16sp"
+                android:textColor="@color/textColourPrimary"
+                />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/categoryFilterOptions"
+
+
+                ></Spinner>
+        </TableRow>
+
+        <TableRow android:padding="1dip">
+
+            <TextView
+                android:id="@+id/filterOptionsTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Options"
+                android:textSize="16sp"
+                android:textColor="@color/textColourPrimary"
+                />
+
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/filterOptions"
+
+
+                ></Spinner>
+
+
+
+        </TableRow>
+
+        <TableRow android:padding="5dip"
+            >
+
+            <Button
+                android:id="@+id/getDetails"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_span="2"
+                android:text="Show data"
+                android:textColor="#fff"
+                android:backgroundTint="@color/buttonColourPrimary"
+                />
+        </TableRow>
+
+    </TableLayout>
+
+
+    <com.github.mikephil.charting.charts.PieChart
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="210dp"
+        android:id="@+id/chart"></com.github.mikephil.charting.charts.PieChart>
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Money manager</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+        <string name="ExpenditureDetails">ExpenditureDetails</string>
+        <string name="FromDate">FromDate</string>
+        <string name="ToDate">ToDate</string>
+        <string name="GetDetails">GetDetails</string>
+    <string name="Amount">Amount</string>
+    <string name="Date">Date</string>
+    <string-array name="Category_n">
+        <item>Food</item>
+        <item>Education</item>
+        <item>Entertainment</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="Account_options">
+        <item>Card</item>
+        <item>Cash</item>
+    </string-array>
+    <string-array name="Recurrence_options">
+        <item>One Time</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+        <item>Yearly</item>
+    </string-array>
+    <string-array name="Category_m">
+        <item>Salary</item>
+        <item>Bonus</item>
+        <item>Allowance</item>
+        <item>Others</item>
+    </string-array>
+</resources>
