@@ -6,6 +6,7 @@ A link to download the first version will be uploaded soon here.
 
 Until then follow our developer's blog for the latest updates and other information about our team, [Blog link](https://dbse-teaching.github.io/isee2019-CodeSlayers/)
 
+Try our basic prototype by downloading the apk file by clicking this <a href="https://drive.google.com/uc?export=download&id=1TxCjvpOLhsihHTcBW02jBoygxtXJKN-P">link</a>
 
 # Software Engineers Blog
 
