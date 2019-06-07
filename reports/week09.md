@@ -2,63 +2,60 @@
 
 | No | Goal  | Responsible  |
 | :-----: | :-: | :-: |
-| 1 | Adding more Database constraints |  Poorvi and Cecil  |
+| 1 | Retreiving Data ,parsing and adding more Database constraints |  Poorvi and Cecil  |
 | 2 | Application UI flow modification based on review |  Prathap and Hari  |
-| 3 | Presentation and Blog |  Poorvi and Prathap  |
+| 3 | Application name and logo   |  Poorvi and Prathap  |
 | 4 | Application settings menu |  Poorvi and Prathap |
-| 5 | Visual stats based on filters and of income |  Hari  |
-| 6 | Design solution and context  |  Cecil  |
-| 7 | Editing the exisiting code with coding conventions | Hari and Prathap|
-| 8 | Design pattern for the application development | Cecil and Poorvi |
-
+| 5 | Application PIN - Authentication |  Prathap  |
+| 6 | Visual stats based on filters and of income |  Hari  |
+| 7 | Adding new user stories |  Cecil  |
+| 8 | Editing the exisiting code with coding conventions | Hari and Prathap|
+| 9 | Design pattern for the application development | Cecil and Poorvi |
 
 #### SECTION 2 
 
 Activities completed
 
-1. Adding more Database constraints
-2. Application UI flow modification based on review
-3. Presentation and Blog  - Advance prototype 
-4. Application settings menu
-5. Visual stats based on filters and date
-6. Design solution and context 
-7. Design pattern for the application development
-8. Authentication
+1. Receiving and Parsing data
+2. Application name and logo
+3. Adding new user stories
+4. Application PIN - Authentication
 
 Activities in progress 
 
-1. Exporting monthly income and expense 
-2. Setting up threshold values 
-3. Visual stats - Bar chart 
-4. Editing the existing code with coding conventions
-5. Updating Blog page design and Presentation - beta prototype 
+1. Authentication
+2. Settings Tab
+3. Visual stats based on filters and of income
+4. Editing the exisiting code with coding conventions
+5. Updating Blog page design and Presentation 
+6. Application UI flow modification based on review
 
 Things learned  
 
-1. Design Solutions   
+1. Design Patterns     
 2. Coding conventions 
-3. How to find target users - context of use 
+3. PIN autentication 
 
 Problems and troubles faced
 
-1. Adapting coding conventions 
-2. Design patterns formulation  
+1. Design patterns formulation  
+2. Setting up PIN authentication  
 
 #### SECTION 3 
 
-| No | Goal  | Responsible  |
-| :-----: | :-: | :-: |
-| 1 | Setting up threshod values |  Poorvi |
-| 2 | Exporting monthly data  |  Prathap  |
-| 3 | Bar chart for monthly filter visual stats |  Cecil  |
-| 4 | Forget PIN setting and Fragment names |  Hari |
-| 5 | Blog content - Beta prototype |  Poorvi and Cecil |
-| 6 | Presentation - Beta prototype |  Prathap  |
-| 7 | Blod design | Hari |
+| 1 | Adding more Database constraints |  Poorvi and Cecil  |
+| 2 | Application UI flow modification based on review |  Prathap and Hari  |
+| 3 | Presentation and Blog |  Poorvi and Prathap  |
+| 4 | Application settings menu |  Poorvi and Prathap |
+| 5 | Visual stats based on filters and of income |  Hari  |
+| 6 | Deisng solution and context  |  Cecil  |
+| 7 | Editing the exisiting code with coding conventions | Hari and Prathap|
+| 8 | Design pattern for the application development | Cecil and Poorvi |
 
 #### SECTION 4 
 
 1. Approval for changes made in the application 
-2. Testing acceptance
-3. Blog review
-4. Other clarifications in design if necessary
+2. Performance Testing of application and approval of the same
+3. Question on formating the code as per the coding conventions
+4. Desing pattern and design solutions 
+5. Other clarifications in design if necessary
