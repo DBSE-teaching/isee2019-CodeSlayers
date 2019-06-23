@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contextClickable="true"
+    android:background="@color/appBackGround"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/log"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"
+        android:layout_centerInParent="true"
+        android:layout_above="@id/boxPIN"
+        />
+
+    <EditText
+        android:id="@+id/boxPIN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="numberPassword"
+        android:maxLength="4"
+        android:hint="Enter PIN"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/boxPIN"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/submitPIN"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Submit PIN"
+            android:textColor="#fff"
+            android:backgroundTint="@color/buttonColourPrimary"
+            />
+
+        <Button
+            android:id="@+id/forgotPin"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/submitPIN"
+            android:text="Forgot PIN"
+            android:textColor="#fff"
+            android:backgroundTint="@color/buttonColourPrimary"
+
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

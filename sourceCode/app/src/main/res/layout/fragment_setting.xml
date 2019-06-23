@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/in_out"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contextClickable="true"
+    android:background="@color/appBackGround"
+    >
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:stretchColumns="1">
+        <TableRow android:padding="5dip"
+            >
+            <EditText
+                android:id="@+id/categoryName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Enter new category"
+                />
+            <Button
+                android:id="@+id/addNewExpenseCategory"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_span="2"
+                android:text="Add Expense Category"
+                android:textColor="#fff"
+                android:backgroundTint="@color/buttonColourPrimary"
+                />
+            </TableRow>
+
+        <TableRow android:padding="5dip"
+            >
+            <EditText
+                android:id="@+id/categoryIncomeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Enter new category"
+                />
+            <Button
+                android:id="@+id/addNewIncomeCategory"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_span="2"
+                android:text="Add Income Category"
+                android:textColor="#fff"
+                android:backgroundTint="@color/buttonColourPrimary"
+                />
+        </TableRow>
+
+        <TableRow android:padding="5dip"
+            >
+            <EditText
+                android:id="@+id/settingPinBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="PIN - Number of length four"
+                android:inputType="numberPassword"
+                android:maxLength="4"
+                />
+        </TableRow>
+
+        <TableRow android:padding="5dip"
+            >
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/authorizationOptions"
+                ></Spinner>
+            <Button
+                android:id="@+id/setAuthorizationSwitch"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_span="2"
+                android:text="Set Authorization Switch/ Change PIN"
+                android:textColor="#fff"
+                android:backgroundTint="@color/buttonColourPrimary"
+                />
+        </TableRow>
+        <TableRow android:padding="5dip"
+            >
+            <EditText
+                android:id="@+id/emailBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Set email id (Forget PIN/Statement) "
+
+
+                />
+        </TableRow>
+        <TableRow android:padding="5dip"
+            >
+            <Button
+                android:id="@+id/setEmail"
+                android:layout_height="wrap_content"
+                android:text="Set Email"
+                android:textColor="#fff"
+                android:backgroundTint="@color/buttonColourPrimary"
+                />
+            <Button
+                android:id="@+id/showEmail"
+                android:layout_height="wrap_content"
+                android:text="Show Email"
+                android:textColor="#fff"
+                android:backgroundTint="@color/buttonColourPrimary"
+                />
+
+        </TableRow>
+
+
+    </TableLayout>
+
+</RelativeLayout>
