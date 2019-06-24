@@ -5,5 +5,6 @@
 <item android:id="@+id/addNew" android:title="Add New Transaction" android:icon="@drawable/ic_add_circle_black_24dp"/>
 <item android:id="@+id/visual" android:title="Visual statistics" android:icon="@drawable/ic_pie_chart_black_24dp" />
     <item android:id="@+id/report" android:title="Report" android:icon="@drawable/ic_action_name"/>
-<item android:id="@+id/settings" android:title="Settings" android:icon="@drawable/ic_settings_black_24dp"/>
+    <item android:id="@+id/threshold" android:title="Threshold" android:icon="@drawable/ic_threshold"/>
+    <item android:id="@+id/settings" android:title="Settings" android:icon="@drawable/ic_settings_black_24dp"/>
 </menu>

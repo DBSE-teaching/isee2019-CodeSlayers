@@ -16,6 +16,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String CATEGORY_EXPENSE_TABLE_NAME = "category_expense_table";
     public static final String CATEGORY_INCOME_TABLE_NAME = "category_income_table";
     public static final String AUTHORIZATION_TABLE_NAME = "authorization_table";
+    public static final String THRESHOLD_TABLE_NAME = "threshold_table";
     public static final String COL_1 = "ID";
     public static final String COL_2 = "Amount";
     public static final String COL_3 = "Year";
@@ -31,6 +32,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COL_AUTH_2 = "Pin";
     public static final String COL_AUTH_3 = "Switch";
     public static final String COL_AUTH_4 = "Email";
+    public static final String COL_THRESH = "Value";
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, 1);
     }
@@ -39,7 +41,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table money_table (ID INTEGER PRIMARY KEY AUTOINCREMENT, AMOUNT INT, YEAR INT, CATEGORY TEXT, ACCOUNT TEXT, RECURRENCE BOOLEAN, NOTES TEXT, MONTH INT, DAY INT)");
         db.execSQL("create table income_table (ID INTEGER PRIMARY KEY AUTOINCREMENT, AMOUNT INT, YEAR INT, CATEGORY TEXT, ACCOUNT TEXT, RECURRENCE BOOLEAN, NOTES TEXT, MONTH INT, DAY INT)");
-        db.execSQL("create table category_expense_table (ID INTEGER PRIMARY KEY AUTOINCREMENT, CATEGORY TEXT)");
+        db.execSQL("create table category_expense_table (ID INTEGER PRIMARY KEY AUTOINCREMENT, CATEGORY TEXT, VALUE INTEGER)");
         db.execSQL("create table category_income_table (ID INTEGER PRIMARY KEY AUTOINCREMENT, CATEGORY TEXT)");
         db.execSQL("create table authorization_table (ID INTEGER PRIMARY KEY AUTOINCREMENT, Pin INTEGER, Switch INTEGER, Email TEXT)");
     }
@@ -318,6 +320,54 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor res = db.rawQuery("select PIN, Email from authorization_table", null);
         return res;
     }
+
+    public boolean insertThreshold(String category, int Value){
+        SQLiteDatabase db= this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COL_4, category);
+        contentValues.put(COL_THRESH, Value);
+        long result = db.insert(CATEGORY_EXPENSE_TABLE_NAME, null, contentValues);
+        if (result == -1)
+            return false;
+        else
+            return true;
+    }
+
+
+
+    public boolean setThreshold (String category, int Value){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COL_4, category);
+        contentValues.put(COL_THRESH, Value);
+        String where = "category=?";
+        String[] whereArgs = new String[] {category};
+        long result = db.update(CATEGORY_EXPENSE_TABLE_NAME, contentValues, where, whereArgs);
+        if (result == -1)
+            return false;
+        else
+            return true;
+    }
+
+    public Cursor getThreshValue (){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("select * from category_expense_table", null);
+        return res;
+    }
+
+    public Cursor getThreshold(String category){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("select value from category_expense_table where category = '" + category + "'", null);
+        return res;
+
+    }
+    public Cursor getSum(String category, int month, int year){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("select sum(amount) from money_table where category = '" + category + "' and month = " + month + " and year = " + year, null);
+        return res;
+    }
+
+
 
 
 }

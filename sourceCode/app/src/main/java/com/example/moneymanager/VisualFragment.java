@@ -141,6 +141,7 @@ public class VisualFragment extends Fragment {
     private void setupPieChart(ArrayList<String> CategoryExpenseList){
         List<PieEntry> pieEntries = new ArrayList<>();
         for (int k = 0; k < CategoryExpenseList.size(); k++) {
+            if(expenseValues[k] != 0)
             pieEntries.add(new PieEntry(expenseValues[k],CategoryExpenseList.get(k)));
         }
         PieDataSet dataset = new PieDataSet(pieEntries, "Expense chart");

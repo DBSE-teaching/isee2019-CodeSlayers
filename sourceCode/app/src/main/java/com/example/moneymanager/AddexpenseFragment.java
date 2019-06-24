@@ -1,6 +1,8 @@
 package com.example.moneymanager;
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -39,12 +41,14 @@ public class AddexpenseFragment extends Fragment {
     int year;
     int month;
     int day;
+    ThresholdFragment tf;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_addexpense,container,false);
         moneydb = new DatabaseHelper(getActivity());
+        tf=new ThresholdFragment();
 
 
         Cursor res = moneydb.getAllExpenseCategory();
@@ -122,6 +126,58 @@ public class AddexpenseFragment extends Fragment {
                                     null,
                                     notes.getText().toString());
                             if (insertData == true) {
+                                Cursor Value = moneydb.getThreshold(category.getSelectedItem().toString());
+                                Value.moveToFirst();
+                                int Catsel= Integer.parseInt(Value.getString(0));
+
+                                Cursor TValue = moneydb.getSum(category.getSelectedItem().toString(),month,year);
+                                TValue.moveToFirst();
+                                int Sumsel= Integer.parseInt(TValue.getString(0));
+
+                                if(Catsel > 0){
+                                    if(Sumsel>Catsel){
+                                        // Build an AlertDialog
+                                        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                                        // Set a title for alert dialog
+                                        builder.setTitle("ALERT!");
+
+                                        // Ask the final question
+                                        builder.setMessage("Threshold exceeded");
+
+                                        // Set click listener for alert dialog buttons
+                                        DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                ;
+                                                switch (which) {
+                                                    case DialogInterface.BUTTON_POSITIVE:
+                                                        // User clicked the Yes button
+                                                        break;
+
+                                                    case DialogInterface.BUTTON_NEGATIVE:
+                                                        // User clicked the No button
+                                                        break;
+                                                }
+                                            }
+                                        };
+
+                                        // Set the alert dialog yes button click listener
+                                        builder.setPositiveButton("Okay", dialogClickListener);
+
+                                        // Set the alert dialog no button click listener
+                                        //builder.setNegativeButton("No", dialogClickListener);
+
+                                        AlertDialog dialog = builder.create();
+                                        // Display the alert dialog on interface
+                                        dialog.show();
+
+
+
+
+                                    }
+                                }
+
+
                                 Toast.makeText(getActivity(), "Data inserted", Toast.LENGTH_LONG).show();
                                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container
                                         , new IncomeFragment()).commit();

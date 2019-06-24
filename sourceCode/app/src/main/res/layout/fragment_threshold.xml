@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/in_out"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contextClickable="true"
+    android:background="@color/appBackGround"
+    >
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:stretchColumns="1">
+        <TableRow android:padding="5dip"
+            >
+            <TextView
+                android:id="@+id/categoryOptionsTag1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Category"
+                android:textSize="16sp"
+                android:textColor="@color/textColourPrimary"
+                />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/categoryOptions1"
+                ></Spinner>
+
+        </TableRow>
+
+
+        <TableRow android:padding="5dip"
+            >
+            <EditText
+                android:id="@+id/thresholdValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Enter monthly threshold"
+                android:inputType="numberSigned"
+                android:maxLength="4"
+                />
+            <Button
+                android:id="@+id/addThreshold"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_span="2"
+                android:text="Add Monthly Threshold "
+                android:textColor="#fff"
+                android:backgroundTint="@color/buttonColourPrimary"
+                />
+        </TableRow>
+        <TableRow android:padding="5dip"
+            >
+
+            <Button
+                android:id="@+id/submit1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_span="2"
+                android:text="See Threshold Values"
+                android:textColor="#fff"
+                android:backgroundTint="@color/buttonColourPrimary"
+                />
+        </TableRow>
+
+    </TableLayout>
+    <ListView
+        android:id="@+id/myListView1"
+        android:layout_width="wrap_content"
+        android:layout_height="190dp"
+        android:layout_marginTop="170dp" />
+
+    <ListView
+        android:id="@+id/myListView2"
+        android:layout_width="wrap_content"
+        android:layout_height="190dp"
+        android:layout_marginTop="370dp" />
+
+</RelativeLayout>

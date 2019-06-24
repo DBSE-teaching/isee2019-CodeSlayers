@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
             String[] categoryDefaultList = {"Food", "Shopping", "Entertainment", "Travel", "Others"};
             int i = 0;
             while(i < categoryDefaultList.length) {
-                boolean insertCategory = moneydb.insertExpenseCategory(categoryDefaultList[i]);
+                boolean insertCategory = moneydb.insertThreshold(categoryDefaultList[i], 0);
                 if (insertCategory == true)
                     i++;
                 else
@@ -106,6 +106,9 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
                 break;
             case R.id.report:
                 getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container,new ReportFragment()).commit();
+                break;
+            case R.id.threshold:
+                getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container,new ThresholdFragment()).commit();
                 break;
         }
         mDrawerLayout.closeDrawer(GravityCompat.START);
