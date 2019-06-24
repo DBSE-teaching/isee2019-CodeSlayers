@@ -137,28 +137,10 @@ public class SummaryFragment extends Fragment {
         viewCurrentMonthExpenseData();
         viewCurrentMonthIncomeData();
 
-        String categoryValues[] = getResources().getStringArray(R.array.Category_n);
         moneyDatabase = new DatabaseHelper(getActivity());
-        Cursor res3 = moneyDatabase.getSelectedAllData(currentYear,currentMonth);
-        if (res3.getCount() == 0) {
-            Toast.makeText(getActivity(),"No expense data",Toast.LENGTH_LONG).show();
-        }else{
-            while (res3.moveToNext()) {
-                for (int k = 0; k < categoryValues.length; k++) {
-                    if(categoryValues[k].equals(res3.getString(3))){
-                        expenseValues[k] += res3.getInt(1);
-                    }
-                }
-            }
-            //setupThisMonthPieChart(categoryValues);
-            setupBarChart();
-        }
-
-
+        setupBarChart();
 
         return view;
-
-
     }
 
     public void viewCurrentMonthExpenseData() {
@@ -192,229 +174,6 @@ public class SummaryFragment extends Fragment {
         adapter2 = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, listIncomeItem);
         myIncomeListView.setAdapter(adapter2);
     }
-
-
-
-    private void setChart() {
-        ArrayList<BarEntry> barEntries = new ArrayList<>();
-
-        for(int monthCounter = 1; monthCounter < 9; monthCounter++){
-            Cursor monthlyCategory = moneyDatabase.getSelectedExpenseSum(currentYear, monthCounter);
-            monthlyCategory.moveToFirst();
-            if(monthlyCategory.getString(0) == null){
-                barEntries.add(new BarEntry(monthCounter, 0));
-            } else{
-                barEntries.add(new BarEntry(monthCounter, monthlyCategory.getInt(0)));
-            }
-        }
-
-
-        ArrayList<BarEntry> barEntries2 = barEntries;
-        //ArrayList<BarEntry> incomeEntries = getIncomeEntries();
-        //ArrayList<BarEntry> expenseEntries = getExpenseEntries();
-
-        BarDataSet set1, set2;
-
-        set1 = new BarDataSet(barEntries, "Income");
-        set1.setColor(Color.rgb(65, 168, 121));
-        set1.setValueTextColor(Color.rgb(55, 70, 73));
-        set1.setValueTextSize(10f);
-
-        set2 = new BarDataSet(barEntries2, "Expense");
-        set2.setColors(Color.rgb(241, 107, 72));
-        set2.setValueTextColor(Color.rgb(55, 70, 73));
-        set2.setValueTextSize(10f);
-
-        ArrayList<IBarDataSet> dataSets = new ArrayList<>();
-        dataSets.add(set1);
-        dataSets.add(set2);
-
-        BarData data = new BarData(set1,set2);
-        barChart.setData(data);
-
-
-        barChart.getDescription().setEnabled(false);
-        barChart.setDrawBarShadow(false);
-        barChart.setDrawValueAboveBar(true);
-        //barChart.setMaxVisibleValueCount(10);
-        barChart.setPinchZoom(false);
-        barChart.setDrawGridBackground(false);
-        //barChart.animateY(1400, Easing.EaseInOutQuad);
-        //barChart.animateXY(3000, 3000);
-
-        Legend l = barChart.getLegend();
-        l.setWordWrapEnabled(true);
-        l.setTextSize(14);
-        l.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
-        l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.CENTER);
-        l.setOrientation(Legend.LegendOrientation.HORIZONTAL);
-        l.setDrawInside(false);
-        l.setForm(Legend.LegendForm.CIRCLE);
-
-        ArrayList<String> xLabels = new ArrayList<>();
-        xLabels.add("Jan");
-        xLabels.add("Feb");
-        xLabels.add("Mar");
-        xLabels.add("Apr");
-        xLabels.add("May");
-        xLabels.add("Jun");
-        xLabels.add("Jul");
-        xLabels.add("Aug");
-        xLabels.add("Sep");
-        xLabels.add("Oct");
-        xLabels.add("Nov");
-        xLabels.add("Dec");
-
-
-        XAxis xAxis = barChart.getXAxis();
-        xAxis.setGranularity(1f);
-        xAxis.setCenterAxisLabels(true);
-        xAxis.setDrawGridLines(false);
-        xAxis.setLabelRotationAngle(-45);
-        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
-        xAxis.setAxisMaximum(data.getXMax() + 0.25f);
-        xAxis.setValueFormatter(new IndexAxisValueFormatter(xLabels));
-        xAxis.setLabelCount(8);
-
-
-
-        YAxis leftAxis = barChart.getAxisLeft();
-        leftAxis.removeAllLimitLines();
-        leftAxis.setTypeface(Typeface.DEFAULT);
-        leftAxis.setPosition(YAxis.YAxisLabelPosition.OUTSIDE_CHART);
-        leftAxis.setTextColor(Color.BLACK);
-        leftAxis.setDrawGridLines(false);
-        leftAxis.setAxisMinValue(0f); // this replaces setStartAtZero(true
-        barChart.getAxisRight().setEnabled(false);
-
-        float barSpace = 0.02f;
-        float groupSpace = 0.3f;
-        int groupCount = 7;
-
-        //IMPORTANT *****
-        data.setBarWidth(0.15f);
-        barChart.getXAxis().setAxisMinimum(0);
-        barChart.getXAxis().setAxisMaximum(0 + barChart.getBarData().getGroupWidth(groupSpace, barSpace) * groupCount);
-        barChart.groupBars(0, groupSpace, barSpace); // perform the "explicit" grouping
-        //***** IMPORTANT
-        barChart.invalidate();
-
-    }
-
-    private ArrayList<String> getFormattter() {
-
-        ArrayList<String> xLabels = new ArrayList<>();
-        xLabels.add("Jan");
-        xLabels.add("Feb");
-        xLabels.add("Mar");
-        xLabels.add("Apr");
-        xLabels.add("May");
-        xLabels.add("Jun");
-        xLabels.add("Jul");
-        xLabels.add("Aug");
-        xLabels.add("Sep");
-        xLabels.add("Oct");
-        xLabels.add("Nov");
-        xLabels.add("Dec");
-
-        return xLabels;
-    }
-
-    public void setaChart(){
-
-
-
-
-        barChart.setDrawBarShadow(false);
-        barChart.setDrawValueAboveBar(true);
-        //barChart.setDescription("");
-        barChart.setMaxVisibleValueCount(50);
-        barChart.setPinchZoom(false);
-        barChart.setDrawGridBackground(false);
-
-        XAxis xl = barChart.getXAxis();
-        xl.setGranularity(1f);
-        xl.setCenterAxisLabels(true);
-
-
-        barChart.getAxisRight().setEnabled(false);
-
-        //data
-        float groupSpace = 0.04f;
-        float barSpace = 0.02f; // x2 dataset
-        float barWidth = 0.46f; // x2 dataset
-        // (0.46 + 0.02) * 2 + 0.04 = 1.00 -> interval per "group"
-
-        int startYear = 1980;
-        int endYear = 1986;
-
-
-        List<BarEntry> yVals1 = new ArrayList<BarEntry>();
-        List<BarEntry> yVals2 = new ArrayList<BarEntry>();
-
-         int i = startYear;
-         Cursor res = moneyDatabase.getThreshValue();
-        if (res.getCount() == 0) {
-            Toast.makeText(getActivity(), "no threshold", Toast.LENGTH_LONG).show();
-        }
-        while (res.moveToNext()) {
-            yVals1.add(new BarEntry(i, res.getInt(2)));
-            Cursor res2 = moneyDatabase.getSum(res.getString(1),currentMonth,currentYear);
-            res2.moveToFirst();
-            yVals2.add(new BarEntry(i, res2.getInt(0)));
-            i++;
-            Log.d("sollunga", " " + res.getInt(2));
-            Log.d("sollunganna", " " + res2.getInt(0));
-            Log.d("sollunganna", " " + i);
-            yVals1.get(0);
-        }
-        Log.d("sollunganna", " " + yVals1.get(0));
-        Log.d("sollunganna", " " + yVals1.get(1));
-        Log.d("sollunganna", " " + yVals1.get(2));
-        Log.d("sollunganna", " " + yVals1.get(3));
-        Log.d("sollunganna", " " + yVals1.get(4));
-
-
-
-
-
-
-
-
-
-        BarDataSet set1, set2;
-
-
-            // create 2 datasets with different types
-            set1 = new BarDataSet(yVals1, "Threshold");
-            set1.setColor(Color.rgb(104, 241, 175));
-            set2 = new BarDataSet(yVals2, "Amount");
-            set2.setColor(Color.rgb(164, 228, 251));
-
-            ArrayList<IBarDataSet> dataSets = new ArrayList<IBarDataSet>();
-            dataSets.add(set1);
-            dataSets.add(set2);
-
-            BarData data = new BarData(dataSets);
-            barChart.setData(data);
-
-        ArrayList<String> xLabels = new ArrayList<>();
-        xLabels.add("Food");
-        xLabels.add("Feb");
-        xLabels.add("Mar");
-        xLabels.add("Apr");
-        //xLabels.add("May");
-
-
-
-
-        barChart.getBarData().setBarWidth(barWidth);
-        barChart.getXAxis().setAxisMinValue(startYear);
-        barChart.groupBars(startYear, groupSpace, barSpace);
-        barChart.invalidate();
-    }
-
-
 
     public void create_graph(List<String> graph_label, List<Integer> userScore, List<Integer> userScore2) {
 
@@ -555,7 +314,13 @@ public class SummaryFragment extends Fragment {
             Cursor res2 = moneyDatabase.getSum(res.getString(1),currentMonth,currentYear);
             res2.moveToFirst();
             yVals2.add(res2.getInt(0));
-            xLabels.add(res.getString(1));
+
+            String myString = res.getString(1);
+            int maxLength = 4;
+            if (myString.length() > maxLength)
+                myString = myString.substring(0, maxLength);
+
+            xLabels.add(myString);
 
             groupCount++;
         }

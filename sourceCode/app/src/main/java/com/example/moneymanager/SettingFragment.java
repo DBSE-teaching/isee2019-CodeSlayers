@@ -84,7 +84,7 @@ public class SettingFragment extends Fragment {
                     @Override
                     public void onClick(View v) {
                         if (!newUserExpenseCategory.getText().toString().equals("")){
-                            boolean insertData = moneydb.insertExpenseCategory(newUserExpenseCategory.getText().toString());
+                            boolean insertData = moneydb.insertThreshold(newUserExpenseCategory.getText().toString(),0);
                             if (insertData == true) {
                                 Toast.makeText(getActivity(), "Category inserted", Toast.LENGTH_LONG).show();
                                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container

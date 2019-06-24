@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:stretchColumns="1">
+        android:stretchColumns="1"
+        android:id="@+id/layout1">
         <TableRow android:padding="5dip"
             >
             <TextView
@@ -56,31 +57,68 @@
                 android:backgroundTint="@color/buttonColourPrimary"
                 />
         </TableRow>
+
         <TableRow android:padding="5dip"
             >
-
             <Button
                 android:id="@+id/submit1"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_span="2"
-                android:text="See Threshold Values"
+                android:text="See Values"
                 android:textColor="#fff"
                 android:backgroundTint="@color/buttonColourPrimary"
                 />
+            <Button
+                android:id="@+id/submit2"
+                android:layout_height="wrap_content"
+                android:text="See Comparison"
+                android:textColor="#fff"
+                android:backgroundTint="@color/buttonColourPrimary"
+                />
+
         </TableRow>
 
     </TableLayout>
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="170dp"
+        android:layout_column="0"
+        android:layout_marginLeft="10dp"
+
+        android:textColor="@color/textColourPrimary"
+        android:textSize="16sp"
+        android:id="@+id/headerExpense"
+        android:text="Threshold values set for each category"
+        />
     <ListView
         android:id="@+id/myListView1"
         android:layout_width="wrap_content"
         android:layout_height="190dp"
-        android:layout_marginTop="170dp" />
 
+        android:layout_below="@id/headerExpense"/>
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_column="0"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/myListView1"
+        android:textColor="@color/textColourPrimary"
+        android:textSize="16sp"
+        android:id="@+id/headerExpense2"
+        android:text="Expenses in each category for comparison"
+        />
     <ListView
         android:id="@+id/myListView2"
+        android:layout_below="@id/headerExpense2"
         android:layout_width="wrap_content"
         android:layout_height="190dp"
-        android:layout_marginTop="370dp" />
+         />
+    <com.github.mikephil.charting.charts.BarChart
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="170dp"
+        android:id="@+id/barChart"></com.github.mikephil.charting.charts.BarChart>
 
 </RelativeLayout>

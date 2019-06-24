@@ -9,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -135,6 +136,7 @@ public class VisualFragment extends Fragment {
             setupPieChart(CategoryExpenseList);
         }
         chartSelectedData();
+        filterView();
         return view;
     }
 
@@ -415,6 +417,45 @@ public class VisualFragment extends Fragment {
         public String getFormattedValue(float value, AxisBase axis) {
             return mLabels[(int) value];
         }
+    }
+
+    public void filterView() {
+        filterOptionsSelected.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selected = filterOptionsSelected.getSelectedItem().toString();
+
+                switch (position) {
+                    case 0:
+                        categorySelected.setVisibility(View.GONE);
+                        monthSelected.setVisibility(View.GONE);
+                        yearSelected.setVisibility(View.GONE);
+                        break;
+                    case 1:
+                        categorySelected.setVisibility(View.GONE);
+                        monthSelected.setVisibility(View.VISIBLE);
+                        yearSelected.setVisibility(View.VISIBLE);
+                        break;
+                    case 2:
+                        categorySelected.setVisibility(View.GONE);
+                        monthSelected.setVisibility(View.GONE);
+                        yearSelected.setVisibility(View.VISIBLE);
+                        break;
+                    case 3:
+                        categorySelected.setVisibility(View.VISIBLE);
+                        monthSelected.setVisibility(View.GONE);
+                        yearSelected.setVisibility(View.VISIBLE);
+                        break;
+
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
     }
 }
 

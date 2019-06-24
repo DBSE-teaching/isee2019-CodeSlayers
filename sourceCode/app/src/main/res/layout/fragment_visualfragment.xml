@@ -6,12 +6,51 @@
     android:stretchColumns="1">
 
     <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/tablelayoutexpense_id2"
+        android:id="@+id/tablelayoutexpense_id5"
         android:layout_width="match_parent"
         android:layout_height="50dip"
         android:background="@color/appBackGround"
         android:orientation="vertical"
         android:stretchColumns="1">
+
+        <TableRow android:padding="1dip">
+
+            <TextView
+                android:id="@+id/filterOptionsTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Options"
+                android:textSize="16sp"
+                android:textColor="@color/textColourPrimary"
+                />
+
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/filterOptions"
+
+
+                ></Spinner>
+
+
+
+        </TableRow>
+
+
+    </TableLayout>
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tablelayoutexpense_id2"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@color/appBackGround"
+        android:layout_below="@+id/tablelayoutexpense_id5"
+        android:orientation="vertical"
+        android:stretchColumns="1">
+
+
 
 
         <TableRow
@@ -25,7 +64,8 @@
                 android:layout_marginLeft="10dp"
                 android:text="Date"
                 android:textColor="@color/textColourPrimary"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                />
 
             <Spinner
                 android:id="@+id/monthList"
@@ -78,30 +118,6 @@
                 ></Spinner>
         </TableRow>
 
-        <TableRow android:padding="1dip">
-
-            <TextView
-                android:id="@+id/filterOptionsTag"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="Options"
-                android:textSize="16sp"
-                android:textColor="@color/textColourPrimary"
-                />
-
-
-            <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/filterOptions"
-
-
-                ></Spinner>
-
-
-
-        </TableRow>
 
         <TableRow android:padding="5dip"
             >
@@ -116,6 +132,8 @@
                 android:backgroundTint="@color/buttonColourPrimary"
                 />
         </TableRow>
+
+
 
     </TableLayout>
 
