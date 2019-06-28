@@ -13,6 +13,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -144,35 +146,55 @@ public class SummaryFragment extends Fragment {
     }
 
     public void viewCurrentMonthExpenseData() {
-        ArrayList<String> listExpenseItem = new ArrayList<>();
+        ArrayList<String> listItemAmount = new ArrayList<>();
+        ArrayList<String> listItemDate = new ArrayList<>();
+        ArrayList<String> listItemCategory = new ArrayList<>();
+        ArrayList<String> listItemID= new ArrayList<>();
         Cursor res = moneyDatabase.getSelectedAllData(currentYear,currentMonth);
         if (res.getCount() == 0) {
-            listExpenseItem.add("No expenses found");
+            //listItemAmount.add("No expenses found");
         }
         while (res.moveToNext()) {
             String item = new String();
             item = res.getString(1) + "$ for " + res.getString(3) + " on "
                     + res.getString(8) + "/" + res.getString(7) + "/" + res.getString(2);
-            listExpenseItem.add(item);
+            listItemAmount.add(res.getString(1));
+            listItemDate.add(res.getString(8) + "/" + res.getString(7) + "/" + res.getString(2));
+            listItemCategory.add(res.getString(3));
+            listItemID.add(res.getString(0));
         }
-        adapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, listExpenseItem);
-        myExpenseListView.setAdapter(adapter);
+        CustomAdaptor customAdaptor = new CustomAdaptor(listItemAmount, listItemDate, listItemCategory,listItemID);
+        //adapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, listItem);
+
+        myExpenseListView.setAdapter(customAdaptor);
+        //adapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, listExpenseItem);
+        //myExpenseListView.setAdapter(adapter);
     }
 
     public void viewCurrentMonthIncomeData() {
-        ArrayList<String> listIncomeItem = new ArrayList<>();
+        ArrayList<String> listItemAmount = new ArrayList<>();
+        ArrayList<String> listItemDate = new ArrayList<>();
+        ArrayList<String> listItemCategory = new ArrayList<>();
+        ArrayList<String> listItemID= new ArrayList<>();
         Cursor res = moneyDatabase.getSelectedAllIncomeData(currentYear,currentMonth);
         if (res.getCount() == 0) {
-            listIncomeItem.add("No income found");
+            //listItemAmount.add("No income found");
         }
         while (res.moveToNext()) {
             String item = new String();
             item = res.getString(1) + "$ by " + res.getString(3) + " on "
                     + res.getString(8) + "/" + res.getString(7) + "/" + res.getString(2);
-            listIncomeItem.add(item);
+            listItemAmount.add(res.getString(1));
+            listItemDate.add(res.getString(8) + "/" + res.getString(7) + "/" + res.getString(2));
+            listItemCategory.add(res.getString(3));
+            listItemID.add(res.getString(0));
         }
-        adapter2 = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, listIncomeItem);
-        myIncomeListView.setAdapter(adapter2);
+        CustomAdaptor customAdaptor = new CustomAdaptor(listItemAmount, listItemDate, listItemCategory,listItemID);
+        //adapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, listItem);
+
+        myIncomeListView.setAdapter(customAdaptor);
+        //adapter2 = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, listIncomeItem);
+        //myIncomeListView.setAdapter(adapter2);
     }
 
     public void create_graph(List<String> graph_label, List<Integer> userScore, List<Integer> userScore2) {
@@ -239,10 +261,10 @@ public class SummaryFragment extends Fragment {
                 barChart.notifyDataSetChanged();
             } else {
                 // create 2 datasets with different types
-                set1 = new BarDataSet(yVals1, "Threshold");
-                set1.setColor(Color.rgb(255, 0, 0));
-                set2 = new BarDataSet(yVals2, "Expense");
-                set2.setColor(Color.rgb(0, 204, 0));
+                set1 = new BarDataSet(yVals2, "Expense");
+                set1.setColor(Color.rgb(0, 255, 0));
+                set2 = new BarDataSet(yVals1, "Threshold");
+                set2.setColor(Color.rgb(255, 0, 0));
 
 
                 ArrayList<IBarDataSet> dataSets = new ArrayList<IBarDataSet>();
@@ -329,6 +351,97 @@ public class SummaryFragment extends Fragment {
 
     }
 
+    class CustomAdaptor extends BaseAdapter {
+        ArrayList<String> listItemAmount = new ArrayList<>();
+        ArrayList<String> listItemDate = new ArrayList<>();
+        ArrayList<String> listItemCategory = new ArrayList<>();
+        ArrayList<String> listItemID= new ArrayList<>();
+
+        CustomAdaptor(ArrayList<String> listItemAmountt, ArrayList<String> listItemDatee, ArrayList<String> listItemCategoryy, ArrayList<String> listItemIDD ){
+            for(String s : listItemAmountt){
+                listItemAmount.add(s);
+            }
+            for(String s : listItemDatee){
+                listItemDate.add(s);
+            }
+            for(String s : listItemCategoryy){
+                listItemCategory.add(s);
+            }
+            for(String s : listItemIDD){
+                listItemID.add(s);
+            }
+        }
+
+        @Override
+        public int getCount() {
+            return listItemAmount.size();
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return listItemID.get(position);
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return 0;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+
+            View view = getLayoutInflater().inflate(R.layout.listview_layout, null);
+
+
+
+            //String imageViewName = "R.drawable." + listItemCategory.get(position).toLowerCase();
+
+            ImageView mImageView = (ImageView) view.findViewById(R.id.imageView);
+            TextView mTextView = (TextView) view.findViewById(R.id.textView);
+            TextView mTextView2 = (TextView) view.findViewById(R.id.textView2);
+            TextView mTextView3 = (TextView) view.findViewById(R.id.textView3);
+
+            switch (listItemCategory.get(position).toLowerCase()){
+                case "food":
+                    mImageView.setImageResource(R.drawable.food);
+                    break;
+                case "travel":
+                    mImageView.setImageResource(R.drawable.travel);
+                    break;
+                case "education":
+                    mImageView.setImageResource(R.drawable.education);
+                    break;
+                case "utilities":
+                    mImageView.setImageResource(R.drawable.utilities);
+                    break;
+                case "shopping":
+                    mImageView.setImageResource(R.drawable.shopping);
+                    break;
+                case "household":
+                    mImageView.setImageResource(R.drawable.household);
+                    break;
+                case "medical":
+                    mImageView.setImageResource(R.drawable.medical);
+                    break;
+                case "salary":
+                    mImageView.setImageResource(R.drawable.salary);
+                    break;
+                case "allowance":
+                    mImageView.setImageResource(R.drawable.allowance);
+                    break;
+                default:
+                    mImageView.setImageResource(R.drawable.others);
+                    break;
+            }
+
+            //mImageView.setImageResource(R.drawable.log);
+            mTextView.setText(listItemAmount.get(position) + "$");
+            mTextView2.setText(listItemDate.get(position));
+            mTextView3.setText(listItemCategory.get(position));
+
+            return view;
+        }
+    }
 
 }
 

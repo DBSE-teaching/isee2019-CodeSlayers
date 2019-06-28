@@ -1,5 +1,6 @@
 package com.example.moneymanager;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -20,8 +21,9 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
     private FloatingActionButton addButton;
+    private FloatingActionButton voiceButton;
     DatabaseHelper moneydb;
-    public static boolean isSummaryShown = false ;
+    public static boolean isSummaryShown = false;
 
 
     @Override
@@ -34,9 +36,9 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
         //Setting up the default Expense category list
         Cursor res = moneydb.getAllExpenseCategory();
         if (res.getCount() == 0) {
-            String[] categoryDefaultList = {"Food", "Shopping", "Entertainment", "Travel", "Others"};
+            String[] categoryDefaultList = {"Food", "Shopping", "Entertainment", "Travel", "Education","Household","Medical", "Utilities", "Others"};
             int i = 0;
-            while(i < categoryDefaultList.length) {
+            while (i < categoryDefaultList.length) {
                 boolean insertCategory = moneydb.insertThreshold(categoryDefaultList[i], 0);
                 if (insertCategory == true)
                     i++;
@@ -63,52 +65,60 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        mToggle = new ActionBarDrawerToggle(this,mDrawerLayout, R.string.open, R.string.close);
+        mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
         mDrawerLayout.addDrawerListener(mToggle);
         mToggle.syncState();
 
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //Floating action button to add a new transaction from anywhere
+        addButton = (FloatingActionButton) findViewById(R.id.addButton);
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container, new IncomeFragment()).commit();
 
-            //Floating action button to add a new transaction from anywhere
-            addButton = (FloatingActionButton) findViewById(R.id.addButton);
-            addButton.setOnClickListener(new View.OnClickListener(){
-                @Override
-                public void onClick(View v) {
-                    getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container,new IncomeFragment()).commit();
+            }
+        });
 
-                }
-            });
+        voiceButton = (FloatingActionButton) findViewById(R.id.voiceButton);
+        voiceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent launch = new Intent(MainActivity.this, VoiceActivity.class);
+                startActivity(launch);
+            }
+        });
 
-            //Setting up the default fragment
-            getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container,new SummaryFragment()).commit();
+        //Setting up the default fragment
+        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container, new SummaryFragment()).commit();
 
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.history:
-                getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container,new ExpenseFragment()).commit();
+                getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container, new ExpenseFragment()).commit();
                 break;
             case R.id.addNew:
-                getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container,new IncomeFragment()).commit();
+                getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container, new IncomeFragment()).commit();
                 break;
             case R.id.summary:
-                getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container,new SummaryFragment()).commit();
+                getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container, new SummaryFragment()).commit();
                 break;
             case R.id.visual:
-                getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container,new VisualFragment()).commit();
+                getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container, new VisualFragment()).commit();
                 break;
             case R.id.settings:
-                getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container,new SettingFragment()).commit();
+                getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container, new SettingFragment()).commit();
                 break;
             case R.id.report:
-                getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container,new ReportFragment()).commit();
+                getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container, new ReportFragment()).commit();
                 break;
             case R.id.threshold:
-                getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container,new ThresholdFragment()).commit();
+                getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container, new ThresholdFragment()).commit();
                 break;
         }
         mDrawerLayout.closeDrawer(GravityCompat.START);
@@ -116,8 +126,8 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item){
-        if (mToggle.onOptionsItemSelected(item)){
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (mToggle.onOptionsItemSelected(item)) {
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -129,7 +139,7 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
 
         int count = getSupportFragmentManager().getBackStackEntryCount();
 
-        if(isSummaryShown){
+        if (isSummaryShown) {
             finishAffinity();
 
         }

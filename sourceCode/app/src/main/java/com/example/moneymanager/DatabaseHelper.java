@@ -100,7 +100,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public Cursor getAllData(){
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res = db.rawQuery("select * from money_table",null);
+        Cursor res = db.rawQuery("select * from money_table order by year desc, month desc, day desc, category, amount desc ",null);
         return res;
     }
 
@@ -135,19 +135,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public Cursor getSelectedAllData(int yearInput, int monthInput){
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res = db.rawQuery("select * from money_table where year = " + yearInput + " and month = " + monthInput,null);
+        Cursor res = db.rawQuery("select * from money_table where year = " + yearInput + " and month = " + monthInput + " order by year desc, month desc, day desc, category, amount desc",null);
         return res;
     }
 
     public Cursor getSelectedCategoryData(String category){
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res = db.rawQuery("select * from money_table where category = '" + category + "'",null);
+        Cursor res = db.rawQuery("select * from money_table where category = '" + category + "' order by year desc, month desc, day desc, category, amount desc",null);
         return res;
     }
 
     public Cursor getSelectedCategoryAndDateData(int yearInput, int monthInput, String category){
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res = db.rawQuery("select * from money_table where year = " + yearInput + " and month = " + monthInput + " and category = '" + category +"'",null);
+        Cursor res = db.rawQuery("select * from money_table where year = " + yearInput + " and month = " + monthInput + " and category = '" + category +"' order by year desc, month desc, day desc, category, amount desc",null);
         return res;
     }
 
@@ -191,7 +191,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public Cursor getAllIncomeData(){
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res = db.rawQuery("select * from income_table", null);
+        Cursor res = db.rawQuery("select * from income_table order by year desc, month desc, day desc, category, amount desc", null);
         return res;
     }
 
@@ -214,7 +214,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public Cursor getSelectedAllIncomeData(int yearInput, int monthInput){
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res = db.rawQuery("select * from income_table where year = " + yearInput + " and month = " + monthInput,null);
+        Cursor res = db.rawQuery("select * from income_table where year = " + yearInput + " and month = " + monthInput + " order by year desc, month desc, day desc, category, amount desc",null);
         return res;
     }
 

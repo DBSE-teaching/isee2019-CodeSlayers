@@ -30,8 +30,8 @@ public class ExpenseFragment extends Fragment {
         tabLayout = (TabLayout) view.findViewById(R.id.tablelayout_id);
         viewPager = (ViewPager) view.findViewById(R.id.viewpager_id);
         ViewPagerAdapter  adapter = new ViewPagerAdapter(getChildFragmentManager());
-        adapter.AddFragment(new ShowexpenseFragment(),"Showexpense");
-        adapter.AddFragment(new ShowincomeFragment(),"Showincome");
+        adapter.AddFragment(new ShowexpenseFragment(),"Expense");
+        adapter.AddFragment(new ShowincomeFragment(),"Income");
 
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);

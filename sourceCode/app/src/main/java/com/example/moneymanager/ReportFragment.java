@@ -102,7 +102,7 @@ public class ReportFragment extends Fragment {
 
 
                             if (res.getCount() == 0) {
-                                Toast.makeText(getActivity(), "No expenses found", Toast.LENGTH_LONG).show();
+                                //Toast.makeText(getActivity(), "No expenses found", Toast.LENGTH_LONG).show();
                             }
 
                             while (res.moveToNext()) {
@@ -130,7 +130,7 @@ public class ReportFragment extends Fragment {
 
 
                             if (res2.getCount() == 0) {
-                                Toast.makeText(getActivity(), "No Income found", Toast.LENGTH_LONG).show();
+                                //Toast.makeText(getActivity(), "No Income found", Toast.LENGTH_LONG).show();
                             }
 
                             while (res2.moveToNext()) {

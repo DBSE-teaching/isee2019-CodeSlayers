@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/appBackGround"
     android:stretchColumns="1">
 
+
     <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/tablelayoutexpense_id5"
+        android:id="@+id/tablelayoutexpense_id2"
         android:layout_width="match_parent"
-        android:layout_height="50dip"
+        android:layout_height="wrap_content"
         android:background="@color/appBackGround"
         android:orientation="vertical"
         android:stretchColumns="1">
@@ -21,41 +22,25 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:text="Options"
-                android:textSize="16sp"
                 android:textColor="@color/textColourPrimary"
-                />
+                android:textSize="16sp" />
 
 
             <Spinner
+                android:id="@+id/filterOptions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/filterOptions"
 
 
                 ></Spinner>
 
 
-
         </TableRow>
-
-
-    </TableLayout>
-
-    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/tablelayoutexpense_id2"
-        android:layout_width="match_parent"
-        android:layout_height="50dip"
-        android:background="@color/appBackGround"
-        android:layout_below="@+id/tablelayoutexpense_id5"
-        android:orientation="vertical"
-        android:stretchColumns="1">
-
-
 
 
         <TableRow
             android:id="@+id/fromdate"
-            android:padding="15dp">
+            android:padding="1dip">
 
             <TextView
                 android:id="@+id/selectDateTag"
@@ -64,8 +49,7 @@
                 android:layout_marginLeft="10dp"
                 android:text="Date"
                 android:textColor="@color/textColourPrimary"
-                android:textSize="16sp"
-                />
+                android:textSize="16sp" />
 
             <Spinner
                 android:id="@+id/monthList"
@@ -86,17 +70,9 @@
 
 
         </TableRow>
-    </TableLayout>
-    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/appBackGround"
-        android:layout_below="@+id/tablelayoutexpense_id2"
-        android:orientation="vertical"
-        android:stretchColumns="1"
-        android:id="@+id/tablelayoutexpense_id">
 
-        <TableRow android:id="@+id/categoryFilter"
+        <TableRow
+            android:id="@+id/categoryFilter"
             android:padding="1dip">
 
             <TextView
@@ -105,53 +81,43 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:text="Category"
-                android:textSize="16sp"
                 android:textColor="@color/textColourPrimary"
-                />
+                android:textSize="16sp" />
 
             <Spinner
+                android:id="@+id/categoryFilterOptions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/categoryFilterOptions"
 
 
                 ></Spinner>
         </TableRow>
-
-
-        <TableRow android:padding="5dip"
-            >
-
-            <Button
-                android:id="@+id/getDetails"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:layout_span="2"
-                android:text="Show data"
-                android:textColor="#fff"
-                android:backgroundTint="@color/buttonColourPrimary"
-                />
-        </TableRow>
-
-
-
     </TableLayout>
+
+
+    <Button
+        android:id="@+id/getDetails"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/buttonColourPrimary"
+        android:text="Show Chart"
+        android:textColor="#fff"
+        android:layout_below="@+id/tablelayoutexpense_id2"/>
 
 
     <com.github.mikephil.charting.charts.PieChart
 
+        android:id="@+id/chart"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="210dp"
-        android:id="@+id/chart"></com.github.mikephil.charting.charts.PieChart>
+        android:layout_marginTop="210dp"></com.github.mikephil.charting.charts.PieChart>
 
     <com.github.mikephil.charting.charts.BarChart
 
+        android:id="@+id/chartBar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="210dp"
-        android:id="@+id/chartBar"></com.github.mikephil.charting.charts.BarChart>
-
+        android:layout_marginTop="210dp"></com.github.mikephil.charting.charts.BarChart>
 
 
 </RelativeLayout>

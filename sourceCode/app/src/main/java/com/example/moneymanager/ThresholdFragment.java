@@ -316,10 +316,10 @@ public class ThresholdFragment extends Fragment {
                 barChart.notifyDataSetChanged();
             } else {
                 // create 2 datasets with different types
-                set1 = new BarDataSet(yVals1, "Threshold");
-                set1.setColor(Color.rgb(255, 0, 0));
-                set2 = new BarDataSet(yVals2, "Expense");
-                set2.setColor(Color.rgb(0, 204, 0));
+                set1 = new BarDataSet(yVals2, "Expense");
+                set1.setColor(Color.rgb(0, 255, 0));
+                set2 = new BarDataSet(yVals1, "Threshold");
+                set2.setColor(Color.rgb(255, 0, 0));
 
 
                 ArrayList<IBarDataSet> dataSets = new ArrayList<IBarDataSet>();

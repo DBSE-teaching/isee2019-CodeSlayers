@@ -6,115 +6,147 @@
     android:stretchColumns="1">
 
     <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tablelayoutexpense_id"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/appBackGround"
         android:orientation="vertical"
-        android:stretchColumns="1"
-        android:id="@+id/tablelayoutexpense_id">
+        android:stretchColumns="1">
 
 
+        <TableRow android:padding="5dp"
+            android:id="@+id/row1">
 
-    <TableRow android:padding="10dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_marginLeft="10dp"
-            android:textColor="@color/textColour"
-            android:textSize="16sp"
-            android:id="@+id/totalIncome"
-            android:drawableLeft="@drawable/ic_add_circle_black_24dp"
-            android:drawablePadding="5dp"
-          />
-    </TableRow>
+                <ImageView
+                    android:id="@+id/imageViewExpense"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/icons8geldbeuteleuro48"/>
 
-        <TableRow android:padding="10dp">
+                <TextView
+                    android:id="@+id/totalIncome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/imageViewExpense"
+                    android:layout_alignTop="@+id/imageViewExpense"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    android:layout_marginStart="25dp"
+                    />
+            </RelativeLayout>
+        </TableRow>
 
+        <TableRow android:padding="5dp"
+            android:id="@+id/row2"
+            android:layout_below="@+id/row">
 
-
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_marginLeft="10dp"
-            android:textColor="@color/textColour"
-            android:textSize="16sp"
-            android:id="@+id/totalExpense"
-            android:drawableLeft="@drawable/ic_indeterminate_check_box_black_24dp"
-            android:drawablePadding="5dp"
-            />
-    </TableRow>
-
-        <TableRow android:padding="10dp">
-
-            <TextView
+            <RelativeLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_column="0"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/textColour"
-                android:textSize="16sp"
-                android:id="@+id/totalBalance"
-                android:drawableLeft="@drawable/ic_account_balance_black_24dp"
-                android:drawablePadding="5dp"
-                />
+                >
+
+                <ImageView
+                    android:id="@+id/imageViewExpense2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/icons8karteverwenden48" />
+
+                <TextView
+                    android:id="@+id/totalExpense"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/imageViewExpense2"
+                    android:layout_alignTop="@+id/imageViewExpense2"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    android:layout_marginStart="25dp"/>
+            </RelativeLayout>
+        </TableRow>
+
+
+        <TableRow android:padding="5dp"
+            android:id="@+id/row3"
+            android:layout_below="@+id/row2">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageViewExpense3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/icons8aquivalent48" />
+
+                <TextView
+                    android:id="@+id/totalBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/imageViewExpense3"
+                    android:layout_alignTop="@+id/imageViewExpense3"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    android:layout_marginStart="30dp"/>
+            </RelativeLayout>
         </TableRow>
     </TableLayout>
 
     <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="140dp"
-        android:layout_column="0"
-        android:layout_marginLeft="10dp"
-        android:textColor="@color/textColourPrimary"
-        android:textSize="16sp"
         android:id="@+id/headerIncome"
-        />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="140dp"
+        android:textColor="@color/textColourPrimary"
+        android:textSize="16sp" />
 
     <ListView
+        android:id="@+id/myListViewIncome"
         android:layout_width="wrap_content"
         android:layout_height="120dip"
-        android:layout_marginTop="5dp"
         android:layout_below="@id/headerIncome"
-        android:id="@+id/myListViewIncome"/>
+        android:layout_marginTop="5dp" />
 
     <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_column="0"
-        android:layout_marginLeft="10dp"
-        android:layout_below="@id/myListViewIncome"
-        android:textColor="@color/textColourPrimary"
-        android:textSize="16sp"
         android:id="@+id/headerExpense"
-        />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_below="@id/myListViewIncome"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/textColourPrimary"
+        android:textSize="16sp" />
 
     <ListView
+        android:id="@+id/myListViewExpense"
         android:layout_width="wrap_content"
-        android:layout_below="@id/headerExpense"
         android:layout_height="120dip"
-        android:layout_marginTop="10dp"
-        android:id="@+id/myListViewExpense"/>
+        android:layout_below="@id/headerExpense"
+        android:layout_marginTop="10dp" />
 
     <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_column="0"
-        android:layout_marginLeft="10dp"
-        android:layout_below="@id/myListViewExpense"
-        android:textColor="@color/textColourPrimary"
-        android:textSize="16sp"
         android:id="@+id/headerChart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_below="@id/myListViewExpense"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:text="Threshold vs Expenses"
-        />
+        android:textColor="@color/textColourPrimary"
+        android:textSize="16sp" />
 
     <com.github.mikephil.charting.charts.BarChart
-        android:layout_below="@id/headerChart"
+        android:id="@+id/barChart"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:id="@+id/barChart"></com.github.mikephil.charting.charts.BarChart>
+        android:layout_below="@id/headerChart"
+        android:layout_marginTop="10dp"></com.github.mikephil.charting.charts.BarChart>
 
 </RelativeLayout>

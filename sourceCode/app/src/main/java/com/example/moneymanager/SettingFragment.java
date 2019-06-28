@@ -129,7 +129,7 @@ public class SettingFragment extends Fragment {
                     public void onClick(View v) {
                         if(setAuthorizationSwitch.getSelectedItem().toString().equals("On")){
                             String numberString = "^[1-9]\\d*(\\.\\d+)?$";
-                            if(inputPIN.getText().toString().matches(numberString)){
+                            if(inputPIN.getText().toString().matches(numberString) && inputPIN.getText().toString().length() > 3){
                                 boolean updateData = moneydb.setSwitchAndPassword(Integer.parseInt(inputPIN.getText().toString()), 1);
                                 if (updateData == true) {
                                     Toast.makeText(getActivity(), "Authorization On - PIN set", Toast.LENGTH_LONG).show();
@@ -138,7 +138,7 @@ public class SettingFragment extends Fragment {
                                 }else
                                     Toast.makeText(getActivity(), "PIN not set", Toast.LENGTH_LONG).show();
                             }else {
-                                Toast.makeText(getActivity(),"Enter PIN",Toast.LENGTH_LONG).show();
+                                Toast.makeText(getActivity(),"Enter PIN in correct format",Toast.LENGTH_LONG).show();
                             }
                         }else {
                             boolean updateData = moneydb.setSwitchAndPassword(0000, 0);

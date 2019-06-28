@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.util.Log;
 
@@ -55,6 +56,11 @@ public class VisualFragment extends Fragment {
     BarChart chartBar;
     PieChart chart;
 
+    TextView selectDateTag;
+    TextView categoryFilterTag;
+
+    String[] monthss;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -72,19 +78,20 @@ public class VisualFragment extends Fragment {
 
         getDetails = (Button) view.findViewById(R.id.getDetails);
 
+        monthss = new String[] {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
         String[] months = new String[12];
         for (int i = 0; i < 12; i++) {
             months[i] = Integer.toString(i + 1);
         }
         Spinner mySpinner = (Spinner) view.findViewById(R.id.monthList);
         ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1,
-                months);
+                monthss);
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mySpinner.setAdapter(myAdapter);
 
         int currentYear = Calendar.getInstance().get(Calendar.YEAR);
         String[] years = new String[25];
-        for (int i = 0; i < 24; i++) {
+        for (int i = 0; i < 25; i++) {
             years[i] = Integer.toString(currentYear);
             currentYear--;
         }
@@ -120,6 +127,9 @@ public class VisualFragment extends Fragment {
         filterOptionsSelected = (Spinner) view.findViewById(R.id.filterOptions);
         categorySelected = (Spinner) view.findViewById(R.id.categoryFilterOptions);
 
+        selectDateTag = (TextView) view.findViewById(R.id.selectDateTag);
+        categoryFilterTag = (TextView) view.findViewById(R.id.categoryFilterTag);
+
 
 
         Cursor res = moneydb.getAllData();
@@ -136,23 +146,32 @@ public class VisualFragment extends Fragment {
             setupPieChart(CategoryExpenseList);
         }
         chartSelectedData();
+        chartSelectedData();
         filterView();
         return view;
     }
 
     private void setupPieChart(ArrayList<String> CategoryExpenseList){
         List<PieEntry> pieEntries = new ArrayList<>();
+        final int[] COLORFUL_COLORS = {
+                Color.rgb(193, 37, 82), Color.rgb(255, 102, 0), Color.rgb(245, 199, 0),
+                Color.rgb(106, 150, 31), Color.rgb(179, 100, 53),Color.rgb(64, 89, 128), Color.rgb(149, 165, 124), Color.rgb(217, 184, 162),
+                Color.rgb(191, 134, 134), Color.rgb(179, 48, 80), Color.rgb(217, 80, 138), Color.rgb(254, 149, 7)
+        };
         for (int k = 0; k < CategoryExpenseList.size(); k++) {
             if(expenseValues[k] != 0)
             pieEntries.add(new PieEntry(expenseValues[k],CategoryExpenseList.get(k)));
         }
-        PieDataSet dataset = new PieDataSet(pieEntries, "Expense chart");
-        dataset.setColors(ColorTemplate.COLORFUL_COLORS);
-        dataset.setValueTextSize(25);
+        PieDataSet dataset = new PieDataSet(pieEntries, "");
+        dataset.setColors(COLORFUL_COLORS);
+        dataset.setValueTextSize(15);
         PieData data = new PieData(dataset);
 
 
         chart.setData(data);
+        chart.getLegend().setWordWrapEnabled(true);
+        chart.getDescription().setEnabled(false);
+        chart.setDrawEntryLabels(false);
         chart.invalidate();
         chartBar.setVisibility(View.GONE);
         chart.setVisibility(View.VISIBLE);
@@ -240,7 +259,13 @@ public class VisualFragment extends Fragment {
 
             }
             case "Monthly": {
-                int month = Integer.parseInt(monthSelected.getSelectedItem().toString());
+                int month = 0;
+                for(int i=0; i<12; i++){
+                    if(monthss[i].equals(monthSelected.getSelectedItem().toString())){
+                        month = i+1;
+                    }
+                }
+                //int month = Integer.parseInt(monthSelected.getSelectedItem().toString());
                 int year = Integer.parseInt(yearSelected.getSelectedItem().toString());
                 Cursor res = moneydb.getSelectedAllData(year, month);
                 return res;
@@ -253,7 +278,13 @@ public class VisualFragment extends Fragment {
 
             }
             case "Yearly - All Expenses": {
-                int month = Integer.parseInt(monthSelected.getSelectedItem().toString());
+                int month = 0;
+                for(int i=0; i<12; i++){
+                    if(monthss[i].equals(monthSelected.getSelectedItem().toString())){
+                        month = i+1;
+                    }
+                }
+                //int month = Integer.parseInt(monthSelected.getSelectedItem().toString());
                 int year = Integer.parseInt(yearSelected.getSelectedItem().toString());
                 String categoryS = categorySelected.getSelectedItem().toString();
                 Cursor res = moneydb.getSelectedCategoryAndDateData(year, month, categoryS);
@@ -342,6 +373,8 @@ public class VisualFragment extends Fragment {
             yAxis.setGranularity(1f);
             yAxis.setGranularityEnabled(true);
 
+
+
             chartBar.getAxisRight().setEnabled(false);
 
 
@@ -371,7 +404,7 @@ public class VisualFragment extends Fragment {
                 chartBar.notifyDataSetChanged();
             } else {
                 // create 2 datasets with different types
-                set1 = new BarDataSet(yVals1, "SCORE");
+                set1 = new BarDataSet(yVals1, "Expenses");
                 set1.setColor(Color.rgb(255, 204, 0));
 
 
@@ -430,21 +463,29 @@ public class VisualFragment extends Fragment {
                         categorySelected.setVisibility(View.GONE);
                         monthSelected.setVisibility(View.GONE);
                         yearSelected.setVisibility(View.GONE);
+                        selectDateTag.setVisibility(View.GONE);
+                        categoryFilterTag.setVisibility(View.GONE);
                         break;
                     case 1:
                         categorySelected.setVisibility(View.GONE);
                         monthSelected.setVisibility(View.VISIBLE);
                         yearSelected.setVisibility(View.VISIBLE);
+                        selectDateTag.setVisibility(View.VISIBLE);
+                        categoryFilterTag.setVisibility(View.GONE);
                         break;
                     case 2:
                         categorySelected.setVisibility(View.GONE);
                         monthSelected.setVisibility(View.GONE);
                         yearSelected.setVisibility(View.VISIBLE);
+                        selectDateTag.setVisibility(View.VISIBLE);
+                        categoryFilterTag.setVisibility(View.GONE);
                         break;
                     case 3:
                         categorySelected.setVisibility(View.VISIBLE);
                         monthSelected.setVisibility(View.GONE);
                         yearSelected.setVisibility(View.VISIBLE);
+                        selectDateTag.setVisibility(View.VISIBLE);
+                        categoryFilterTag.setVisibility(View.VISIBLE);
                         break;
 
                 }

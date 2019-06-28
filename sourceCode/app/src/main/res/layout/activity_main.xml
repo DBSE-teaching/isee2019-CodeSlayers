@@ -18,6 +18,19 @@
             android:layout_height="match_parent" >
 
             <android.support.design.widget.FloatingActionButton
+                android:id="@+id/voiceButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginRight="37dp"
+                android:layout_marginBottom="120dp"
+                android:clickable="true"
+                app:backgroundTint="@color/buttonColourPrimary"
+                app:fabSize="auto"
+                app:maxImageSize="30dp"
+                app:srcCompat="@drawable/ic_keyboard_voice_black_24dp" />
+
+            <android.support.design.widget.FloatingActionButton
                 android:id="@+id/addButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -42,6 +55,7 @@
         app:menu="@menu/drawermenu"
         android:layout_gravity="start"
         android:id="@+id/nav_view"
+        app:headerLayout="@layout/layout_header"
         >
 
     </android.support.design.widget.NavigationView>

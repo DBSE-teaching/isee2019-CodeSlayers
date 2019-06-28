@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackGround"
+    android:contextClickable="true">
+
+    <TextView
+        android:id="@+id/hintTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+
+        android:text="What can I do ? \n Add new Expense:\n
+         Format- 'ADD' + 'Amount' + 'CATEGORY' + category \n
+         Example- Say 'ADD twenty-four CATEGORY food' \n \nOther things(Keyword): \n    Show Expense/Income/Transaction\n    Show Threshold/Limit \n    Show Chart/Visual \n"
+        android:textColor="@color/textColourPrimary"
+        android:textStyle="bold|italic"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/speakTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hintTag"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/textColourPrimary"
+        android:textSize="25sp" />
+
+    <RelativeLayout
+        android:id="@+id/betweenView"
+        android:layout_width="wrap_content"
+        android:layout_height="300dip"
+        android:layout_below="@+id/speakTag">
+
+        <ListView
+            android:id="@+id/myListView"
+            android:layout_width="wrap_content"
+            android:layout_height="300dip"
+            android:layout_marginTop="10dp" />
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="300dip"
+            android:layout_marginTop="10dp"></com.github.mikephil.charting.charts.PieChart>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/getDetails"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/betweenView"
+
+        android:layout_marginBottom="250dp"
+        android:backgroundTint="@color/buttonColourPrimary"
+        android:drawableLeft="@drawable/ic_keyboard_voice_black_24dp"
+        android:text="Press and speak"
+        android:textColor="#fff" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/voiceButtonn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/getDetails"
+        android:layout_gravity="bottom|end"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="37dp"
+        android:clickable="true"
+        app:backgroundTint="@color/buttonColourPrimary"
+        app:fabSize="auto"
+        app:maxImageSize="30dp"
+        app:srcCompat="@drawable/ic_keyboard_voice_black_24dp" />
+
+
+</RelativeLayout>
+

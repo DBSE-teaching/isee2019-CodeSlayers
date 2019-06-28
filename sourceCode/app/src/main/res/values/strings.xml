@@ -15,8 +15,12 @@
         <item>Others</item>
     </string-array>
     <string-array name="Account_options">
-        <item>Card</item>
+        <item>Debit Card</item>
+        <item>Credit Card</item>
         <item>Cash</item>
+        <item>Bank Transfer</item>
+        <item>E-Wallets</item>
+        <item>Others</item>
     </string-array>
     <string-array name="Recurrence_options">
         <item>One Time</item>
