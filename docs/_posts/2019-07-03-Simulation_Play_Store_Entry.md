@@ -10,6 +10,8 @@ Your budget buddy welcomes you to read our final blog. Please find information o
 
 <h2>ABOUT THE APPLICATION</h2>
 
+<img src="https://live.staticflickr.com/65535/48153898262_63fd6d9917_o_d.png">
+
 Budget Buddy is your go to application to keep your expenditure in check. With this application in your mobile you can,
 
 <ul>
