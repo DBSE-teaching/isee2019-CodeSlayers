@@ -3,8 +3,7 @@ layout: post
 title: "Reflections"
 date: 2019-07-03
 excerpt: "About the course and team work"
-tags: [BetaPrototype]
-comments: true
+tags: [Reflection]
 ---
 
 Your budget buddy welcomes you to read our fifth about the course, team work and the challenges we faced. 
