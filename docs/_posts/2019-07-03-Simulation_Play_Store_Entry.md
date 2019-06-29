@@ -10,9 +10,8 @@ Your budget buddy welcomes you to read our final blog. Please find information o
 
 <h2>ABOUT THE APPLICATION</h2>
 
-Budget Buddy is your go to application to keep your expenditure in check. 
+Budget Buddy is your go to application to keep your expenditure in check. With this application in your mobile you can,
 
-With this application in your mobile you can,
 <ul>
 <li>Forget spending hours going through your bank account on where you spent your money 
 <li>Forget stressing how you did not plan and spent so much in a month 
