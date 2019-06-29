@@ -49,7 +49,8 @@ Budget Buddy makes adding expenses, seeing history of transaction through list a
   <li><b>PIN</b></li>
   <li><b>Report</b></li>
   <li><b>Various filters for seeing history</b></li>
-<h2>DOWNLOAD LINK</h2>
+ <h2>DOWNLOAD LINK</h2>
+ </ul>
 
 
 Thanks for reading the blog and travelled with us during this development !
