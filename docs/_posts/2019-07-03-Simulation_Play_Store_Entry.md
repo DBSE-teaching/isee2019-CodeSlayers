@@ -26,8 +26,10 @@ Budget Buddy makes adding expenses, seeing history of transaction through list a
 <h2>APP INFO</h2>
 <ul>
   <li><b>Version:</b> 1.0</li>
+ <li><b>App Category:</b> Budget/Expenditure management</li>
 <li><b>Updated on:</b> 3rd July, 2019</li>
 <li><b>Download size:</b> 21 mb</li>
+<li><b>Required Android Version:</b> Till Android Oreo </li>
 <li><b>Age:</b> All ages </li>
 <li><b>Targeted group:</b> 12+ </li>
 <li><b>Offered by:</b> CodeSlayers </li>
@@ -41,6 +43,12 @@ Budget Buddy makes adding expenses, seeing history of transaction through list a
 
 <h2>FEAUTURES</h2>
 
+<ul>
+  <li><b>Voice commands</b></li>
+  <li><b>Different Visual stats</b></li>
+  <li><b>PIN</b></li>
+  <li><b>Report</b></li>
+  <li><b>Various filters for seeing history</b></li>
 <h2>DOWNLOAD LINK</h2>
 
 
