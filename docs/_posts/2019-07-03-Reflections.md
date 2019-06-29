@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Beta Prototype"
-date: 2019-06-25
-excerpt: "Near the end"
+title: "Reflections"
+date: 2019-07-03
+excerpt: "About the course and team work"
 tags: [BetaPrototype]
 comments: true
 ---
