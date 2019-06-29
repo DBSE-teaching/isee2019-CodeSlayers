@@ -63,5 +63,7 @@ following way,
 
 <h4>Challenge</h4>
 
+<ul>
 <li>
 The only thing that could have been more helpful was to give the blog questions and slides available at the start of the course. So that it would have helped in implementing the principles thought such as design pattern and design coding conventions as we came to know of such concepts only after we had completed the development. </li>
+  </ul> 
