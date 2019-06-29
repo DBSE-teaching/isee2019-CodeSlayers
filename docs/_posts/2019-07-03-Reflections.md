@@ -59,6 +59,8 @@ following way,
 
 <li>Also learnt to develop a complete android application which is a new skill added to our skillset. </li>
 
+</ul>
+
 <h4>Challenge</h4>
 
 <li>
