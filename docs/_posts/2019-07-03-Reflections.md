@@ -53,9 +53,7 @@ following way,
 <h4>How it met our expectations ?</h4>
 
 <ul>
-<li>Learn the software development knowledge like class diagrams, design patterns and princlple, use case and user stories 
-
-through in interesting way like android development was very helpful. </li>
+<li>Learn the software development knowledge like class diagrams, design patterns and princlple, use case and user stories through in interesting way like android development was very helpful. </li>
 
 <li>This very much improved our coding knowledge, experience and standards. </li>
 
@@ -64,8 +62,4 @@ through in interesting way like android development was very helpful. </li>
 <h4>Challenge</h4>
 
 <li>
-The only thing that could have been more helpful was to give the blog questions and slides available at the start of the 
-
-course. So that it would have helped in implementing the principles thought such as design pattern and design coding 
-
-conventions as we came to know of such concepts only after we had completed the development. </li>
+The only thing that could have been more helpful was to give the blog questions and slides available at the start of the course. So that it would have helped in implementing the principles thought such as design pattern and design coding conventions as we came to know of such concepts only after we had completed the development. </li>
