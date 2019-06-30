@@ -24,7 +24,7 @@ concepts of White and Black box testing was very new to us.</li>
 <p> Being a four member team and having several different kind of activites from blog and presentation to development and 
 testing good team work plays the major role. </p>
 
-<img src="https://live.staticflickr.com/65535/48159385917_cc8ab4a6a2_o_d.jpg">
+<img src="https://live.staticflickr.com/65535/48159445557_aa023c24ad_k_d.jpg">
 
 <h4>Benefits</h4>
 
@@ -45,7 +45,7 @@ applicaiton. </li>
 </ul>
 
 <h2>ABOUT THE COURSE</h2>
-<img src="https://live.staticflickr.com/65535/48159310166_8682ec1c5d_o_d.jpg">
+<img src="https://live.staticflickr.com/65535/48159382436_8fd2f97a10_o_d.gif">
 The course was very helpful in introducing various concepts in software engineering. It met our expectations in the 
 following way,  
 
