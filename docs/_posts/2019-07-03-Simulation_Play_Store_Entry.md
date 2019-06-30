@@ -48,9 +48,15 @@ Budget Buddy makes adding expenses, seeing history of transaction through list a
  <li><b>See your expenses the way you want with various filters</b></li>
  <li><b>Visually analyze your expenses with various charts</b></li>
  <li><b>Secure your data by using optional authorization option</b></li>
- <li><b>Export your data </b></li>
- <h2>DOWNLOAD LINK</h2>
+ <li><b>Export your data to see in other devices/ print out </b></li>
+ <li><b>Keep your expenses in check by setting threshold values </b></li>
+ <li><b>Personalize the application by various settings options</b></li>
+ <li><b>Easy navigation and summary of all important things in the homepage</b></li>
+ <li><b>Use your app with various VOICE commands for partial hands free use</b></li>
  </ul>
+ 
+  <h2>DOWNLOAD LINK</h2>
+ 
 
 
 Thanks for reading the blog and travelled with us during this development !
