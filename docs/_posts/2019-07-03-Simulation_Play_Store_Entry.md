@@ -44,11 +44,11 @@ Budget Buddy makes adding expenses, seeing history of transaction through list a
 <h2>FEAUTURES</h2>
 
 <ul>
-  <li><b>Voice commands</b></li>
-  <li><b>Different Visual stats</b></li>
-  <li><b>PIN</b></li>
-  <li><b>Report</b></li>
-  <li><b>Various filters for seeing history</b></li>
+ <li><b>Store every detail of your expenses with various options</b></li>
+ <li><b>See your expenses the way you want with various filters</b></li>
+ <li><b>Visually analyze your expenses with various charts</b></li>
+ <li><b>Secure your data by using optional authorization option</b></li>
+ <li><b>Export your data </b></li>
  <h2>DOWNLOAD LINK</h2>
  </ul>
 
