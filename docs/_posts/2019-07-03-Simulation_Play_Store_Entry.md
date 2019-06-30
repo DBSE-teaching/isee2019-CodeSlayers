@@ -55,8 +55,9 @@ Budget Buddy makes adding expenses, seeing history of transaction through list a
  <li><b>Use your app with various VOICE commands for partial hands free use</b></li>
  </ul>
  
-  <h2>DOWNLOAD LINK</h2>
+ <h2>DOWNLOAD LINK</h2>
  
+Download link for accessing your budget buddy.  
 
 
 Thanks for reading the blog and travelled with us during this development !
