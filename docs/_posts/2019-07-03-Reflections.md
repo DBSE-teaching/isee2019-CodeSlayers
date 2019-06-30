@@ -9,6 +9,7 @@ tags: [Reflection]
 Your budget buddy welcomes you to read our fifth about the course, team work and the challenges we faced. 
 
 <h2>TECHNICAL CHALLENGES </h2>
+<img src="https://live.staticflickr.com/65535/48159385882_a00ed02092_h_d.jpg">
 <ul>
 <li>We had little experience in software development and found it difficult to grasp the concept quickly. Because of this we 
 had difficulty in implementing such concepts in our software like Design patterns and Coding conventions for example. </li>
@@ -23,9 +24,7 @@ concepts of White and Black box testing was very new to us.</li>
 <p> Being a four member team and having several different kind of activites from blog and presentation to development and 
 testing good team work plays the major role. </p>
 
-<p>Data values used in these above use cases adhere to either Equivalence classes or boundary value analysis.</p>
-
-
+<img src="https://live.staticflickr.com/65535/48159385917_cc8ab4a6a2_o_d.jpg">
 
 <h4>Benefits</h4>
 
@@ -46,6 +45,7 @@ applicaiton. </li>
 </ul>
 
 <h2>ABOUT THE COURSE</h2>
+<img src="https://live.staticflickr.com/65535/48159310166_8682ec1c5d_o_d.jpg">
 The course was very helpful in introducing various concepts in software engineering. It met our expectations in the 
 following way,  
 
