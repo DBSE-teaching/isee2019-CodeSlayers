@@ -45,14 +45,23 @@ Budget Buddy makes adding expenses, seeing history of transaction through list a
 
 <ul>
  <li><b>Store every detail of your expenses with various options</b></li>
+ <img src="https://live.staticflickr.com/65535/48170351462_2ffd0dd29d_o_d.png">
  <li><b>See your expenses the way you want with various filters</b></li>
+ <img src="https://live.staticflickr.com/65535/48170351287_8fc1f34198_o_d.png">
  <li><b>Visually analyze your expenses with various charts</b></li>
+ <img src="https://live.staticflickr.com/65535/48170351932_befc72509a_o_d.png">
+ <img src="https://live.staticflickr.com/65535/48170351882_4e3a2401fe_o_d.png">
  <li><b>Secure your data by using optional authorization option</b></li>
- <li><b>Export your data to see in other devices/ print out </b></li>
+ <img src="https://live.staticflickr.com/65535/48170351837_ac5aafcacd_o_d.png">
+  <li><b>Export your data to see in other devices/ print out </b></li>
  <li><b>Keep your expenses in check by setting threshold values </b></li>
+ <img src="https://live.staticflickr.com/65535/48170278501_7e321acfa8_o_d.png">
  <li><b>Personalize the application by various settings options</b></li>
+ <img src="https://live.staticflickr.com/65535/48170351837_ac5aafcacd_o_d.png">
  <li><b>Easy navigation and summary of all important things in the homepage</b></li>
+  <img src="https://live.staticflickr.com/65535/48170351662_54b9b37b23_o_d.png">
  <li><b>Use your app with various VOICE commands for partial hands free use</b></li>
+ <img src="https://live.staticflickr.com/65535/48170278331_59d283cf34_o_d.png">
  </ul>
  
  <h2>DOWNLOAD LINK</h2>
