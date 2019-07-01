@@ -6,22 +6,27 @@ excerpt: "It's ready"
 tags: [AppStore]
 ---
 
-Your budget buddy welcomes you to read our final blog. Please find information of our application, features and download link. Download the application and keep your pockets full. 
+Budget Buddy welcomes you to it's final blog. Please find information of our application, features and download link. Download the application and keep your pockets full. 
 
 <h2>ABOUT THE APPLICATION</h2>
 
 <img src="https://live.staticflickr.com/65535/48153898262_63fd6d9917_o_d.png">
 
-Budget Buddy is your go to application to keep your expenditure in check. With this application in your mobile you can,
+Budget Buddy is your "Go To" application to keep your expenditure in check. With this application in your mobile you can,
 
 <ul>
-<li>Forget spending hours going through your bank account on where you spent your money </li>
-<li>Forget stressing how you did not plan and spent so much in a month </li>
-<li>Forget finding it difficult to plan the last week of each month with no money in hand</li>
+<li>Forget spending hours by revisiting through your bank account statements for the area of expenditure </li>
+<li>Forget stressing  for lack of plan and additional expenditure at the end of each month  </li>
+<li>Forget difficulty to plan the last week of each month , with less financial condition </li>
 </ul>
 
  
-Budget Buddy makes adding expenses, seeing history of transaction through list and visual views and setting up threshold values for each month easy. When even renowned companies goes into bankruptcy and countries goes into debt crisis, money management is an surely an issue for a common man. Currency used for trading has evolved from barter system to digital money. Now buying of goods and services has become easier and digital marketing lures us to spend. So, tracking the savings and expenditure is an absolute necessity in this modern world. We aim to address at least some part of this issue with our first android application by incorporating easier computing, accessibility of money and tracking of money flow.
+Budget Buddy makes the following tasks easier ,
+<li>* Adding expenses</li>
+<li>* History of transaction  and </li>
+<li>* Visual Statistics and setting up threshold values for month-wise /Category-wise. </li> 
+When even renowned companies fall into bankruptcy and countries suffer debt crisis, money management is surely a great deal for a common man. Currency used for trading has evolved from barter system to digital money. Now buying of goods and services has become easier and digital marketing lures us to spend. So, tracking the savings and expenditure is an absolute necessity in this modern world. 
+We aim to address at least some part of this issue with our first android application by incorporating easier computing, accessibility of money and tracking of money flow.
 
 <h2>APP INFO</h2>
 <ul>
@@ -72,4 +77,4 @@ Budget Buddy makes adding expenses, seeing history of transaction through list a
  Download link for accessing your budget buddy.  
 
 
-Thanks for reading the blog and travelled with us during this development !
+Thank you for travelling with us throughout this entire Application Development !
