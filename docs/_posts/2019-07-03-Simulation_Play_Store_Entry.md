@@ -65,7 +65,9 @@ Budget Buddy makes adding expenses, seeing history of transaction through list a
  <img src="https://live.staticflickr.com/65535/48170278331_9c9596dc97_z_d.jpg"  alt="1" align="center">
  </ul>
  
-<button onclick="window.location='https://drive.google.com/uc?export=download&id=1MF1fdnLvNXh7SgEO7T7lzuzuHMoSc4Q7'">App Download</button>
+<form action="https://drive.google.com/uc?export=download&id=1MF1fdnLvNXh7SgEO7T7lzuzuHMoSc4Q7">
+<button>App Download</button>
+</form>
  
  Download link for accessing your budget buddy.  
 
