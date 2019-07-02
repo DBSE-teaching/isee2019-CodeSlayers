@@ -80,6 +80,10 @@ We aim to address at least some part of this issue with our first android applic
  <img style="border:1px solid black;" src="https://live.staticflickr.com/65535/48170278331_9c9596dc97_z_d.jpg"  alt="1" align="center">
  </ul>
  
+ <li><b> Recurrent expenses can be automatically included in expenditure </b></li>
+ <img style="border:1px solid black;" src="https://live.staticflickr.com/65535/48182480671_55dc9ca24b_z_d.jpg"  alt="1" align="center">
+ </ul>
+ 
  <h2>DOWNLOAD</h2>
  
  Download link for accessing your budget buddy <a href="https://drive.google.com/uc?export=download&id=1QMLN-YIxQKpC2ckXRzmFpy55pvyw19Xg">LINK</a>
