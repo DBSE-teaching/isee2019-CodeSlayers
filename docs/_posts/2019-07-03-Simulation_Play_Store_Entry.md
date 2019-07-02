@@ -48,6 +48,7 @@ We aim to address at least some part of this issue with our first android applic
 
 <h2>FEAUTURES</h2>
 
+<img src = "https://live.staticflickr.com/65535/48182321087_f7975b6934_o_d.png" > 
 <ul>
  <li><b>Store every detail of your expenses with various options</b></li>
  <img style="border:1px solid black;" src="https://live.staticflickr.com/65535/48170351462_dc29887741_z_d.jpg"  alt="1" align="center">
