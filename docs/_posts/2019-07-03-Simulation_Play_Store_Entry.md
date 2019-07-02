@@ -81,12 +81,8 @@ We aim to address at least some part of this issue with our first android applic
  </ul>
  
  <h2>DOWNLOAD</h2>
-
-<form action="https://drive.google.com/uc?export=download&id=1QMLN-YIxQKpC2ckXRzmFpy55pvyw19Xg">
-<button>App Download</button>
-</form>
  
- Download link for accessing your budget buddy. 
+ Download link for accessing your budget buddy <a href="https://drive.google.com/uc?export=download&id=1QMLN-YIxQKpC2ckXRzmFpy55pvyw19Xg">LINK</a>
  
  Alternatively scan the following QR code. 
  
