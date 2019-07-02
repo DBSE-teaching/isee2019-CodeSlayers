@@ -90,7 +90,7 @@ We aim to address at least some part of this issue with our first android applic
  
  Alternatively scan the following QR code. 
  
- <img src = "https://live.staticflickr.com/65535/48182340486_1b0af38e24_o_d.png">
+ <img src = "https://live.staticflickr.com/65535/48182340486_ff75a1286e_z_d.jpg">
 
 
 Thank you for travelling with us throughout this entire Application Development !
