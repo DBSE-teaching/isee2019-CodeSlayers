@@ -80,11 +80,17 @@ We aim to address at least some part of this issue with our first android applic
  <img style="border:1px solid black;" src="https://live.staticflickr.com/65535/48170278331_9c9596dc97_z_d.jpg"  alt="1" align="center">
  </ul>
  
+ <h2>DOWNLOAD</h2>
+
 <form action="https://drive.google.com/uc?export=download&id=1QMLN-YIxQKpC2ckXRzmFpy55pvyw19Xg">
 <button>App Download</button>
 </form>
  
- Download link for accessing your budget buddy.  
+ Download link for accessing your budget buddy. 
+ 
+ Alternatively scan the following QR code. 
+ 
+ <img src = "https://live.staticflickr.com/65535/48182340486_1b0af38e24_o_d.png">
 
 
 Thank you for travelling with us throughout this entire Application Development !
