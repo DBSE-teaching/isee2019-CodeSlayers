@@ -50,23 +50,32 @@ We aim to address at least some part of this issue with our first android applic
 
 <ul>
  <li><b>Store every detail of your expenses with various options</b></li>
- <img style="border:1px solid black;" src="https://live.staticflickr.com/65535/48170351462_dc29887741_d.jpg"  alt="1" align="center">
+ <img style="border:1px solid black;" src="https://live.staticflickr.com/65535/48170351462_dc29887741_n_d.jpg"  alt="1" align="center">
+ 
  <li><b>See your expenses the way you want with various filters</b></li>
  <img style="border:1px solid black;" src="https://live.staticflickr.com/65535/48170351287_9aac1ecc4c_z_d.jpg"  alt="1" align="center">
+ 
  <li><b>Visually analyze your expenses with various charts</b></li>
  <img style="border:1px solid black;" src="https://live.staticflickr.com/65535/48170351882_f0a9c08f5f_z_d.jpg" alt="1" align="center">
+ 
  <img style="border:1px solid black;" src="https://live.staticflickr.com/65535/48170351932_3eedb9f2d7_z_d.jpg"  alt="1" align="center">
+ 
  <li><b>Secure your data by using optional authorization option</b></li>
  <img style="border:1px solid black;" src="https://live.staticflickr.com/65535/48170693172_b33514f7a2_z_d.jpg"  alt="1" align="center">
-  <li><b>Export your data to see in other devices/ print out </b></li>
+ 
+ <li><b>Export your data to see in other devices/ print out </b></li>
   <img style="border:1px solid black;" src="https://live.staticflickr.com/65535/48170617166_1015d2dbd2_z_d.jpg"  alt="1" align="center">
- <li><b>Keep your expenses in check by setting threshold values </b></li>
+
+<li><b>Keep your expenses in check by setting threshold values </b></li>
  <img style="border:1px solid black;" src="https://live.staticflickr.com/65535/48170278501_5d10f4e183_z_d.jpg"  alt="1" align="center">
- <li><b>Personalize the application by various settings options</b></li>
+
+<li><b>Personalize the application by various settings options</b></li>
  <img style="border:1px solid black;" src="https://live.staticflickr.com/65535/48170351837_504528fcf9_z_d.jpg"  alt="1" align="center">
- <li><b>Easy navigation and summary of all important things in the homepage</b></li>
+
+<li><b>Easy navigation and summary of all important things in the homepage</b></li>
   <img style="border:1px solid black;" src="https://live.staticflickr.com/65535/48170351662_97a8b42e5d_z_d.jpg"  alt="1" align="center">
- <li><b>Use your app with various VOICE commands for partial hands free use</b></li>
+
+<li><b>Use your app with various VOICE commands for partial hands free use</b></li>
  <img style="border:1px solid black;" src="https://live.staticflickr.com/65535/48170278331_9c9596dc97_z_d.jpg"  alt="1" align="center">
  </ul>
  
