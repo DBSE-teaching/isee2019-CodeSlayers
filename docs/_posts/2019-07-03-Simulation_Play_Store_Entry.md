@@ -50,7 +50,7 @@ We aim to address at least some part of this issue with our first android applic
 
 <ul>
  <li><b>Store every detail of your expenses with various options</b></li>
- <img src="https://live.staticflickr.com/65535/48170351462_dc29887741_z_d.jpg"  alt="1" align="center" width="25%" height="25%">
+ <img src="https://live.staticflickr.com/65535/48170351462_dc29887741_z_d.jpg"  alt="1" align="center" width="25%" height="25%" border="5">
  <li><b>See your expenses the way you want with various filters</b></li>
  <img src="https://live.staticflickr.com/65535/48170351287_9aac1ecc4c_z_d.jpg"  alt="1" align="center">
  <li><b>Visually analyze your expenses with various charts</b></li>
